@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.1-p1">
+  <compounddef id="class_skyline___pre_sort" kind="class" prot="public">
+    <compoundname>Skyline_PreSort</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_skyline___pre_sort_14fb45f0af53fb09f6a35405c3eb43d34" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_skyline___pre_sort" kindref="compound">Skyline_PreSort</ref></type>
+        <definition>Skyline_PreSort Skyline_PreSort.m_instance</definition>
+        <argsstring></argsstring>
+        <name>m_instance</name>
+        <initializer> null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/Skyline_PreSort.cs" line="19" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/Skyline_PreSort.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_skyline___pre_sort_18e61538e8449047c2ebadffef7b4a0ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Skyline_PreSort.Skyline_PreSort</definition>
+        <argsstring>()</argsstring>
+        <name>Skyline_PreSort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/Skyline_PreSort.cs" line="21" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/Skyline_PreSort.cs" bodystart="20" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_skyline___pre_sort_1ae4b3d114e72653c2b3259b812416397" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_skyline___pre_sort" kindref="compound">Skyline_PreSort</ref></type>
+        <definition>static Skyline_PreSort Skyline_PreSort.Instance</definition>
+        <argsstring>()</argsstring>
+        <name>Instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/Skyline_PreSort.cs" line="24" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/Skyline_PreSort.cs" bodystart="23" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skyline___pre_sort_14b14814443c1999d61a249d20ccac7ba" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList</type>
+        <definition>static ArrayList Skyline_PreSort.SkylineQuery_Presorted</definition>
+        <argsstring>(DataTable dt, ArrayList columnList, ArrayList TypeList)</argsstring>
+        <name>SkylineQuery_Presorted</name>
+        <param>
+          <type>DataTable</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>ArrayList</type>
+          <declname>columnList</declname>
+        </param>
+        <param>
+          <type>ArrayList</type>
+          <declname>TypeList</declname>
+        </param>
+        <briefdescription>
+<para>Skylines the query_ presorted. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The dt.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>columnList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The column list.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TypeList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type list.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/Skyline_PreSort.cs" line="87" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/Skyline_PreSort.cs" bodystart="86" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_skyline___pre_sort_17f8ce8e206aef7b6503c195a30ee2443" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DataTable</type>
+        <definition>static DataTable Skyline_PreSort.PreSort</definition>
+        <argsstring>(DataTable dtSource, ArrayList columnList, ArrayList TypeList)</argsstring>
+        <name>PreSort</name>
+        <param>
+          <type>DataTable</type>
+          <declname>dtSource</declname>
+        </param>
+        <param>
+          <type>ArrayList</type>
+          <declname>columnList</declname>
+        </param>
+        <param>
+          <type>ArrayList</type>
+          <declname>TypeList</declname>
+        </param>
+        <briefdescription>
+<para>Presort all the values in each column of the data table, according to the sorting type specified in TyoeList. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dtSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source data table</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>columnList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>All the columns in the skyline query</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TypeList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sorting type: for each item, 0-AESC, 1-DESC</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The table contains sorted index of the source data objects</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/Skyline_PreSort.cs" line="47" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/Skyline_PreSort.cs" bodystart="46" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;Date&gt;20:18pm, Nov 26th, 2006&lt;/Date&gt; </para>    </briefdescription>
+    <detaileddescription>
+<para>&lt;author&gt;Jarod Wen&lt;/author&gt; </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="25">
+        <label>Skyline_PreSort</label>
+        <link refid="class_skyline___pre_sort"/>
+        <childnode refid="25" relation="usage">
+          <edgelabel>m_instance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/Skyline_PreSort.cs" line="18" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/Skyline_PreSort.cs" bodystart="17" bodyend="138"/>
+    <listofallmembers>
+      <member refid="class_skyline___pre_sort_1ae4b3d114e72653c2b3259b812416397" prot="public" virt="non-virtual"><scope>Skyline_PreSort</scope><name>Instance</name></member>
+      <member refid="class_skyline___pre_sort_14fb45f0af53fb09f6a35405c3eb43d34" prot="private" virt="non-virtual"><scope>Skyline_PreSort</scope><name>m_instance</name></member>
+      <member refid="class_skyline___pre_sort_17f8ce8e206aef7b6503c195a30ee2443" prot="private" virt="non-virtual"><scope>Skyline_PreSort</scope><name>PreSort</name></member>
+      <member refid="class_skyline___pre_sort_18e61538e8449047c2ebadffef7b4a0ad" prot="public" virt="non-virtual"><scope>Skyline_PreSort</scope><name>Skyline_PreSort</name></member>
+      <member refid="class_skyline___pre_sort_14b14814443c1999d61a249d20ccac7ba" prot="public" virt="non-virtual"><scope>Skyline_PreSort</scope><name>SkylineQuery_Presorted</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

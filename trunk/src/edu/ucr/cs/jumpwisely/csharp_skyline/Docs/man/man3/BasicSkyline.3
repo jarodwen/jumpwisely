@@ -1,0 +1,179 @@
+.TH "BasicSkyline" 3 "26 Nov 2006" "Version 1.0" "Skyline Website" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BasicSkyline \- \fBBasicSkyline\fP: Basic Skyline computation using BNL.  
+
+.PP
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBasicSkyline\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBBasicSkyline\fP \fBInstance\fP ()"
+.br
+.ti -1c
+.RI "static ArrayList \fBBasicBNLSkyline\fP (DataTable dt, ArrayList columnList)"
+.br
+.RI "\fIBasic Skyline query using BNL. \fP"
+.ti -1c
+.RI "static ArrayList \fBBasicBNLSkyline\fP (DataTable dt, ArrayList columnList, ArrayList TypeList)"
+.br
+.RI "\fIRestruct: Basic Skyline query using BNL. \fP"
+.ti -1c
+.RI "static ArrayList \fBBasicBNLSkyline\fP (DataTable dt, ArrayList columnList, ArrayList TypeList, ArrayList objList)"
+.br
+.RI "\fIRestruct: Basic Skyline query using BNL for presorted skyline query. \fP"
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBblnDominate\fP (DataRow dr1, DataRow dr2, ArrayList columnList, int intType)"
+.br
+.RI "\fISkyline operator: dominate. \fP"
+.ti -1c
+.RI "static bool \fBblnDominate\fP (DataRow dr1, DataRow dr2, ArrayList columnList, ArrayList TypeList)"
+.br
+.RI "\fIRestruct: Skyline operator: dominate. \fP"
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBBasicSkyline\fP \fBm_instance\fP = null"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBBasicSkyline\fP: Basic Skyline computation using BNL. 
+
+<author>Jarod Wen</author> <Date>20:18pm, Nov 26th, 2006</Date> 
+.PP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BasicSkyline.BasicSkyline ()"
+.PP
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBBasicSkyline\fP BasicSkyline.Instance ()\fC [static]\fP"
+.PP
+.SS "static ArrayList BasicSkyline.BasicBNLSkyline (DataTable dt, ArrayList columnList)\fC [static]\fP"
+.PP
+Basic Skyline query using BNL. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdt\fP Source Data Table
+.br
+\fIcolumnList\fP Columns on which Skyline query will be processed
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The list of index of all the skyline objects in source data table
+.RE
+.PP
+
+.SS "static ArrayList BasicSkyline.BasicBNLSkyline (DataTable dt, ArrayList columnList, ArrayList TypeList)\fC [static]\fP"
+.PP
+Restruct: Basic Skyline query using BNL. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdt\fP Source Data Table
+.br
+\fIcolumnList\fP Columns on which Skyline query will be processed
+.br
+\fITypeList\fP The list of comparation type on each columns in the columnList
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The list of index of all the skyline objects in source data table
+.RE
+.PP
+
+.SS "static ArrayList BasicSkyline.BasicBNLSkyline (DataTable dt, ArrayList columnList, ArrayList TypeList, ArrayList objList)\fC [static]\fP"
+.PP
+Restruct: Basic Skyline query using BNL for presorted skyline query. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdt\fP Source Data Table
+.br
+\fIcolumnList\fP Columns on which Skyline query will be processed
+.br
+\fITypeList\fP The list of comparation type on each columns in the columnList
+.br
+\fIobjList\fP The list of the rows to be compared.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The list of index of all the skyline objects in source data table
+.RE
+.PP
+
+.SS "static bool BasicSkyline.blnDominate (DataRow dr1, DataRow dr2, ArrayList columnList, int intType)\fC [static, private]\fP"
+.PP
+Skyline operator: dominate. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdr1\fP Left data object of the operator.
+.br
+\fIdr2\fP Right data object of the operator.
+.br
+\fIcolumnList\fP Columns on which Skyline query will be processed
+.br
+\fIintType\fP Comparation type: 0-Larger better; 1-Smaller better.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Whether left data object dominate the right one.
+.RE
+.PP
+
+.SS "static bool BasicSkyline.blnDominate (DataRow dr1, DataRow dr2, ArrayList columnList, ArrayList TypeList)\fC [static, private]\fP"
+.PP
+Restruct: Skyline operator: dominate. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdr1\fP Left data object of the operator.
+.br
+\fIdr2\fP Right data object of the operator.
+.br
+\fIcolumnList\fP Columns on which Skyline query will be processed
+.br
+\fIintType\fP Comparation type: 0-Larger better; 1-Smaller better.
+.br
+\fITypeList\fP The list of comparation type on each columns in the columnList
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Whether left data object dominate the right one.
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBBasicSkyline\fP \fBBasicSkyline.m_instance\fP = null\fC [static, private]\fP"
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Skyline Website from the source code.

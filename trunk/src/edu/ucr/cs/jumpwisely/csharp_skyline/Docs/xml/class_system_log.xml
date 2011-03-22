@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.1-p1">
+  <compounddef id="class_system_log" kind="class" prot="public">
+    <compoundname>SystemLog</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_system_log_15dd503098e479e061b3e3e3428ff3d5d" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_system_log" kindref="compound">SystemLog</ref></type>
+        <definition>SystemLog SystemLog.m_instance</definition>
+        <argsstring></argsstring>
+        <name>m_instance</name>
+        <initializer> null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/SystemLog.cs" line="19" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/SystemLog.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_system_log_16312dea36684b65445d00a9490de9869" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_system_log" kindref="compound">SystemLog</ref></type>
+        <definition>static SystemLog SystemLog.Instance</definition>
+        <argsstring>()</argsstring>
+        <name>Instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/SystemLog.cs" line="21" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/SystemLog.cs" bodystart="20" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_system_log_113a7c6c9a3e17b692af31c82416191b0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SystemLog.WriteException</definition>
+        <argsstring>(string strException)</argsstring>
+        <name>WriteException</name>
+        <param>
+          <type>string</type>
+          <declname>strException</declname>
+        </param>
+        <briefdescription>
+<para>Write Error Log into ErrLog.txt. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>strException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content of Error.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/SystemLog.cs" line="46" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/SystemLog.cs" bodystart="45" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_system_log_134b464465ea413a95865f5eb7e3af41a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SystemLog.SystemLog</definition>
+        <argsstring>()</argsstring>
+        <name>SystemLog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/SystemLog.cs" line="36" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/SystemLog.cs" bodystart="35" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Manage all the errors directed to the methods in this class. </para>    </briefdescription>
+    <detaileddescription>
+<para>&lt;author&gt;Jarod Wen&lt;/author&gt; &lt;Date&gt;20:18pm, Nov 26th, 2006&lt;/Date&gt; </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="27">
+        <label>SystemLog</label>
+        <link refid="class_system_log"/>
+        <childnode refid="27" relation="usage">
+          <edgelabel>m_instance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/SystemLog.cs" line="18" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/SystemLog.cs" bodystart="17" bodyend="64"/>
+    <listofallmembers>
+      <member refid="class_system_log_16312dea36684b65445d00a9490de9869" prot="public" virt="non-virtual"><scope>SystemLog</scope><name>Instance</name></member>
+      <member refid="class_system_log_15dd503098e479e061b3e3e3428ff3d5d" prot="private" virt="non-virtual"><scope>SystemLog</scope><name>m_instance</name></member>
+      <member refid="class_system_log_134b464465ea413a95865f5eb7e3af41a" prot="public" virt="non-virtual"><scope>SystemLog</scope><name>SystemLog</name></member>
+      <member refid="class_system_log_113a7c6c9a3e17b692af31c82416191b0" prot="public" virt="non-virtual"><scope>SystemLog</scope><name>WriteException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

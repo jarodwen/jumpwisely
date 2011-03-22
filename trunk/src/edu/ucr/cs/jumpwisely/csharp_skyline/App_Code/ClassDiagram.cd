@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="SimSun" Size="9" />
+  <Class Name="BasicSkyline" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\BasicSkyline.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAQAAIQAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EpsilonSkyline" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\EpsilonSkyline.cs</FileName>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAgBAAAIIAQAAIQAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsSchema" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\skylinewebsite\cb096bc5\bbdeaf61\Sources_App_Code\dsschema.xsd.72cecc2a.cs</FileName>
+      <HashCode>AAAAAAAAAwAAAAJABAAAQAAAAAgCQBgAIAAAAAEEhBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skyline_PreSort" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Skyline_PreSort.cs</FileName>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAIQAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemLog" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\SystemLog.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAAABAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsSchemaTableAdapters.SchemasTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\skylinewebsite\cb096bc5\bbdeaf61\Sources_App_Code\dsschema.xsd.72cecc2a.cs</FileName>
+      <HashCode>EAQAAGAAAAAAAAMAIAAAABAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.1-p1">
+  <compounddef id="class_user_define__2" kind="class" prot="public">
+    <compoundname>UserDefine_2</compoundname>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_user_define__2_1f2c3668025d7c5754bde56e107a630df" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UserDefine_2.Page_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Page_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_2.aspx.cs" line="22" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_2.aspx.cs" bodystart="21" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_define__2_15b011d4483a8a941a435c3bbde949ae3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UserDefine_2.Button1_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Button1_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_2.aspx.cs" line="90" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_2.aspx.cs" bodystart="89" bodyend="168"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_user_define__2_1f7b63bcd828ad66a834225f56a505d6a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UserDefine_2.InitializeDataSetDdl</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeDataSetDdl</name>
+        <briefdescription>
+<para>Initialize the drop down list on UserDefine_2.aspx with name of data table in DB. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_2.aspx.cs" line="34" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_2.aspx.cs" bodystart="33" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_define__2_14fb5145a113acfe9cf6352cc5c940bd6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UserDefine_2.InitializeData</definition>
+        <argsstring>(string strSchemaID)</argsstring>
+        <name>InitializeData</name>
+        <param>
+          <type>string</type>
+          <declname>strSchemaID</declname>
+        </param>
+        <briefdescription>
+<para>Read data schema from DB, according the ID of schema user selected in the previous page. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>strSchemaID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Schema ID</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_2.aspx.cs" line="63" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_2.aspx.cs" bodystart="62" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_define__2_10c53ff63b611c1d629c20e8965177472" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DataTable</type>
+        <definition>DataTable UserDefine_2.GetDataSet</definition>
+        <argsstring>(string strDataTableName)</argsstring>
+        <name>GetDataSet</name>
+        <param>
+          <type>string</type>
+          <declname>strDataTableName</declname>
+        </param>
+        <briefdescription>
+<para>Read data from DB according to the user&apos;s selection on data table in the drop down list. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>strDataTableName</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_2.aspx.cs" line="175" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_2.aspx.cs" bodystart="174" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_define__2_1a8496ae541638350fecaa15c962fa64c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DataTable</type>
+        <definition>DataTable UserDefine_2.ReadFile2Table</definition>
+        <argsstring>(string[] strFileContent, DataTable dtData)</argsstring>
+        <name>ReadFile2Table</name>
+        <param>
+          <type>string[]</type>
+          <declname>strFileContent</declname>
+        </param>
+        <param>
+          <type>DataTable</type>
+          <declname>dtData</declname>
+        </param>
+        <briefdescription>
+<para>Read data from the user text file and also do the bulk upload if necessary. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>strFileContent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contents of the file user uploaded</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dtData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The structure of the table for storing</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Data table filled with data.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_2.aspx.cs" line="199" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_2.aspx.cs" bodystart="198" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_define__2_143557ffdfc9f4257959a78e4da2fd887" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserDefine_2.blnBulk2DB</definition>
+        <argsstring>(DataTable dtSource, string strTblName)</argsstring>
+        <name>blnBulk2DB</name>
+        <param>
+          <type>DataTable</type>
+          <declname>dtSource</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>strTblName</declname>
+        </param>
+        <briefdescription>
+<para>Bulk add data using SqlBulkCopy in .NET 2.0. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dtSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data Table containing data which will be added into database</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>strTblName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of table user want to store as.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Whether the bulk add succeeds</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_2.aspx.cs" line="235" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_2.aspx.cs" bodystart="234" bodyend="279"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>User Defined skyline query: data upload, bilk add and computation. </para>    </briefdescription>
+    <detaileddescription>
+<para>&lt;author&gt;Jarod Wen&lt;/author&gt; &lt;Date&gt;20:18pm, Nov 26th, 2006&lt;/Date&gt; </para>    </detaileddescription>
+    <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_2.aspx.cs" line="20" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_2.aspx.cs" bodystart="19" bodyend="280"/>
+    <listofallmembers>
+      <member refid="class_user_define__2_143557ffdfc9f4257959a78e4da2fd887" prot="private" virt="non-virtual"><scope>UserDefine_2</scope><name>blnBulk2DB</name></member>
+      <member refid="class_user_define__2_15b011d4483a8a941a435c3bbde949ae3" prot="protected" virt="non-virtual"><scope>UserDefine_2</scope><name>Button1_Click</name></member>
+      <member refid="class_user_define__2_10c53ff63b611c1d629c20e8965177472" prot="private" virt="non-virtual"><scope>UserDefine_2</scope><name>GetDataSet</name></member>
+      <member refid="class_user_define__2_14fb5145a113acfe9cf6352cc5c940bd6" prot="private" virt="non-virtual"><scope>UserDefine_2</scope><name>InitializeData</name></member>
+      <member refid="class_user_define__2_1f7b63bcd828ad66a834225f56a505d6a" prot="private" virt="non-virtual"><scope>UserDefine_2</scope><name>InitializeDataSetDdl</name></member>
+      <member refid="class_user_define__2_1f2c3668025d7c5754bde56e107a630df" prot="protected" virt="non-virtual"><scope>UserDefine_2</scope><name>Page_Load</name></member>
+      <member refid="class_user_define__2_1a8496ae541638350fecaa15c962fa64c" prot="private" virt="non-virtual"><scope>UserDefine_2</scope><name>ReadFile2Table</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

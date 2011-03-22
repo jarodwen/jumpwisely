@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.1-p1">
+  <compounddef id="class_user_define__1" kind="class" prot="public">
+    <compoundname>UserDefine_1</compoundname>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_user_define__1_11d150e4e5e939bf4b4a803a1f7cdb8d4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UserDefine_1.Page_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Page_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_1.aspx.cs" line="22" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_1.aspx.cs" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_define__1_15de6fb3f99302207b1d102fbfd814c69" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UserDefine_1.GridView1_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>GridView1_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_1.aspx.cs" line="25" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_1.aspx.cs" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_define__1_1c82fa9d5d28482d89a987b89a029412f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UserDefine_1.btnUpload_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnUpload_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_1.aspx.cs" line="29" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_1.aspx.cs" bodystart="28" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>User Defined skyline query: Schemes upload, select and modify. </para>    </briefdescription>
+    <detaileddescription>
+<para>&lt;author&gt;Jarod Wen&lt;/author&gt; &lt;Date&gt;20:18pm, Nov 26th, 2006&lt;/Date&gt; </para>    </detaileddescription>
+    <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_1.aspx.cs" line="20" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/UserDefine_1.aspx.cs" bodystart="19" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class_user_define__1_1c82fa9d5d28482d89a987b89a029412f" prot="protected" virt="non-virtual"><scope>UserDefine_1</scope><name>btnUpload_Click</name></member>
+      <member refid="class_user_define__1_15de6fb3f99302207b1d102fbfd814c69" prot="protected" virt="non-virtual"><scope>UserDefine_1</scope><name>GridView1_SelectedIndexChanged</name></member>
+      <member refid="class_user_define__1_11d150e4e5e939bf4b4a803a1f7cdb8d4" prot="protected" virt="non-virtual"><scope>UserDefine_1</scope><name>Page_Load</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

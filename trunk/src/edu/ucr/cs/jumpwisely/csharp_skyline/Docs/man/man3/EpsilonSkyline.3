@@ -1,0 +1,191 @@
+.TH "EpsilonSkyline" 3 "26 Nov 2006" "Version 1.0" "Skyline Website" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EpsilonSkyline \- Epsilon: Class of Epsilon Skyline.  
+
+.PP
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEpsilonSkyline\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBEpsilonSkyline\fP \fBInstance\fP ()"
+.br
+.ti -1c
+.RI "static DataTable \fBdtNormalize\fP (DataTable dtSource)"
+.br
+.RI "\fINormalize data in dtSource to N(0, 1). \fP"
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static DataTable \fBdtDataFile2Table\fP (string FileString)"
+.br
+.RI "\fIRead data from the string of a text file to a datatable. The format of the string is Col_1...Col_n
+.br
+. \fP"
+.ti -1c
+.RI "static ArrayList \fBBasicBNLSkyline\fP (DataTable dt)"
+.br
+.RI "\fIBasic BNL algorithm on Skyline query. \fP"
+.ti -1c
+.RI "static bool \fBblnDominate\fP (DataRow dr1, DataRow dr2, int intType)"
+.br
+.ti -1c
+.RI "static ArrayList \fBEpsilon_BNLSkyline\fP (DataTable dt, double dblEpsilon)"
+.br
+.RI "\fIEpsilon_BNL algorithm for Skyline query. \fP"
+.ti -1c
+.RI "static bool \fBblnEpsilon_Dominate\fP (DataRow dr1, DataRow dr2, int intType, double dblEpsilon)"
+.br
+.RI "\fIEpsilon-dominate operator. \fP"
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBEpsilonSkyline\fP \fBm_instance\fP = null"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Epsilon: Class of Epsilon Skyline. 
+
+<author>Jarod Wen</author> <Date>20:18pm, Nov 26th, 2006</Date> 
+.PP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "EpsilonSkyline.EpsilonSkyline ()"
+.PP
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBEpsilonSkyline\fP EpsilonSkyline.Instance ()\fC [static]\fP"
+.PP
+.SS "static DataTable EpsilonSkyline.dtNormalize (DataTable dtSource)\fC [static]\fP"
+.PP
+Normalize data in dtSource to N(0, 1). 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdtSource\fP Source Data Table
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Normalized data table
+.RE
+.PP
+
+.SS "static DataTable EpsilonSkyline.dtDataFile2Table (string FileString)\fC [static, private]\fP"
+.PP
+Read data from the string of a text file to a datatable. The format of the string is Col_1...Col_n
+.br
+. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIFileString\fP Contents of the text file
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Data table filled with the data from the text file
+.RE
+.PP
+
+.SS "static ArrayList EpsilonSkyline.BasicBNLSkyline (DataTable dt)\fC [static, private]\fP"
+.PP
+Basic BNL algorithm on Skyline query. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdt\fP Source Data table
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The list containing all the index of skyline objects
+.RE
+.PP
+
+.SS "static bool EpsilonSkyline.blnDominate (DataRow dr1, DataRow dr2, int intType)\fC [static, private]\fP"
+.PP
+Skyline operator: dominate
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdr1\fP Left data object of the operator.
+.br
+\fIdr2\fP Right data object of the operator.
+.br
+\fIcolumnList\fP Columns on which Skyline query will be processed
+.br
+\fIintType\fP Comparation type: 0-Larger better; 1-Smaller better.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Whether left data object dominate the right one.
+.RE
+.PP
+
+.SS "static ArrayList EpsilonSkyline.Epsilon_BNLSkyline (DataTable dt, double dblEpsilon)\fC [static, private]\fP"
+.PP
+Epsilon_BNL algorithm for Skyline query. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdt\fP Source data table
+.br
+\fIdblEpsilon\fP Value of Epsilon
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The list containing all the index of Epsilon skyline objects
+.RE
+.PP
+
+.SS "static bool EpsilonSkyline.blnEpsilon_Dominate (DataRow dr1, DataRow dr2, int intType, double dblEpsilon)\fC [static, private]\fP"
+.PP
+Epsilon-dominate operator. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdr1\fP Left data object of the operator.
+.br
+\fIdr2\fP Right data object of the operator.
+.br
+\fIcolumnList\fP Columns on which Skyline query will be processed
+.br
+\fIintType\fP Comparation type: 0-Larger better; 1-Smaller better.
+.br
+\fIdblEpsilon\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Whether left data object dominate the right one.
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBEpsilonSkyline\fP \fBEpsilonSkyline.m_instance\fP = null\fC [static, private]\fP"
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Skyline Website from the source code.
