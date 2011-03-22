@@ -1,5 +1,5 @@
 /**
- *	Topk_Research DataKeyComparator.java
+ *	RandomProjection PosPair.java
  *
  *  Copyright (C) 2010 JArod Wen
  *
@@ -16,24 +16,19 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>
  **/
-package edu.ucr.cs.jumpwisely.topk_research.data_model.data_element;
-
-import java.util.Comparator;
+package edu.ucr.cs.jumpwisely.randomprojection;
 
 /**
- * @author jarodwen
+ * @author janie
  *
  */
-public class DataKeyComparator implements Comparator<DataKeyValueBase> {
+public class PosPair {
 
-	@Override
-	public int compare(DataKeyValueBase o1, DataKeyValueBase o2) {
-		if(o1.key.key > o2.key.key)
-			return 1;
-		else if (o1.key.key < o2.key.key)
-			return -1;
-		else
-			return 0;
+	public int L;
+	public int R;
+	
+	public PosPair(int l, int r){
+		this.L = l;
+		this.R = r;
 	}
-
 }
