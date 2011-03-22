@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.1-p1">
+  <compounddef id="dir_61dc526cc7fc2c808e020bcae16a3467" kind="dir">
+    <compoundname>E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/</compoundname>
+    <innerfile refid="_basic_skyline_8cs">BasicSkyline.cs</innerfile>
+    <innerfile refid="_epsilon_skyline_8cs">EpsilonSkyline.cs</innerfile>
+    <innerfile refid="_skyline___pre_sort_8cs">Skyline_PreSort.cs</innerfile>
+    <innerfile refid="_system_log_8cs">SystemLog.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/"/>
+  </compounddef>
+</doxygen>

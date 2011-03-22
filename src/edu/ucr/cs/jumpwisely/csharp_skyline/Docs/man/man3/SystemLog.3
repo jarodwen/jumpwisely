@@ -1,0 +1,68 @@
+.TH "SystemLog" 3 "26 Nov 2006" "Version 1.0" "Skyline Website" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SystemLog \- Manage all the errors directed to the methods in this class.  
+
+.PP
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSystemLog\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBSystemLog\fP \fBInstance\fP ()"
+.br
+.ti -1c
+.RI "static void \fBWriteException\fP (string strException)"
+.br
+.RI "\fIWrite Error Log into ErrLog.txt. \fP"
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBSystemLog\fP \fBm_instance\fP = null"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Manage all the errors directed to the methods in this class. 
+
+<author>Jarod Wen</author> <Date>20:18pm, Nov 26th, 2006</Date> 
+.PP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SystemLog.SystemLog ()"
+.PP
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBSystemLog\fP SystemLog.Instance ()\fC [static]\fP"
+.PP
+.SS "static void SystemLog.WriteException (string strException)\fC [static]\fP"
+.PP
+Write Error Log into ErrLog.txt. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstrException\fP The content of Error.
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBSystemLog\fP \fBSystemLog.m_instance\fP = null\fC [static, private]\fP"
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Skyline Website from the source code.

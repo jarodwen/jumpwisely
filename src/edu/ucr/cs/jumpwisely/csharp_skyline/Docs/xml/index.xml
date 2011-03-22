@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.5.1-p1">
+  <compound refid="class___default" kind="class"><name>_Default</name>
+    <member refid="class___default_1dacf7c92cb8d02f22ce02f0ceed897c1" kind="function"><name>Page_Load</name></member>
+  </compound>
+  <compound refid="class_basic_skyline" kind="class"><name>BasicSkyline</name>
+    <member refid="class_basic_skyline_1a0b9ff43856b8146ac30e87175111212" kind="variable"><name>m_instance</name></member>
+    <member refid="class_basic_skyline_119020e4318d51d4cff02706266da90f3" kind="function"><name>BasicSkyline</name></member>
+    <member refid="class_basic_skyline_1545a96d268b6537fafcdb7e7b496fa9e" kind="function"><name>Instance</name></member>
+    <member refid="class_basic_skyline_1f8c8e370d1e5300c82806621e70b5a32" kind="function"><name>BasicBNLSkyline</name></member>
+    <member refid="class_basic_skyline_1a3885250541ce477c2ae5e28fde15e4b" kind="function"><name>BasicBNLSkyline</name></member>
+    <member refid="class_basic_skyline_190177e10ddb2a3b72276b3731ff04158" kind="function"><name>BasicBNLSkyline</name></member>
+    <member refid="class_basic_skyline_1f21bf043f066f7af784c28f001cf6b42" kind="function"><name>blnDominate</name></member>
+    <member refid="class_basic_skyline_18a06b5c49a50aff03aa13b049dd220af" kind="function"><name>blnDominate</name></member>
+  </compound>
+  <compound refid="class_epsilon_skyline" kind="class"><name>EpsilonSkyline</name>
+    <member refid="class_epsilon_skyline_1e65a7a116dc7a5231a460c20a69fb9de" kind="variable"><name>m_instance</name></member>
+    <member refid="class_epsilon_skyline_172a126a4d0d3d677b0e6b30d7785cfd2" kind="function"><name>EpsilonSkyline</name></member>
+    <member refid="class_epsilon_skyline_1916975cc1add75e369f0c39f8a9609d0" kind="function"><name>Instance</name></member>
+    <member refid="class_epsilon_skyline_11a71cdb83a2b17c45ec117f5538c3fac" kind="function"><name>dtNormalize</name></member>
+    <member refid="class_epsilon_skyline_19accf2bf51afe01007f2ec6e2b0b1bd2" kind="function"><name>dtDataFile2Table</name></member>
+    <member refid="class_epsilon_skyline_1b6354c7ddc243f11e6c2d5eb9f16036c" kind="function"><name>BasicBNLSkyline</name></member>
+    <member refid="class_epsilon_skyline_17a1f69b965a81d949bcca3e603e8a086" kind="function"><name>blnDominate</name></member>
+    <member refid="class_epsilon_skyline_1c15de88b5212b3d33540db2192cf2cc8" kind="function"><name>Epsilon_BNLSkyline</name></member>
+    <member refid="class_epsilon_skyline_1ce1fce86298a280391417e7eb4490f41" kind="function"><name>blnEpsilon_Dominate</name></member>
+  </compound>
+  <compound refid="class_skyline___n_b_a" kind="class"><name>Skyline_NBA</name>
+    <member refid="class_skyline___n_b_a_19612cf97adf08f20366bc8dba30c6099" kind="function"><name>Page_Load</name></member>
+    <member refid="class_skyline___n_b_a_13fbfaad6e0029b03edeac4804746d476" kind="function"><name>btnQuery_Click</name></member>
+    <member refid="class_skyline___n_b_a_1be6c98348f8a28bcdec8a34008eea9a9" kind="function"><name>InitializeData</name></member>
+  </compound>
+  <compound refid="class_skyline___pre_sort" kind="class"><name>Skyline_PreSort</name>
+    <member refid="class_skyline___pre_sort_14fb45f0af53fb09f6a35405c3eb43d34" kind="variable"><name>m_instance</name></member>
+    <member refid="class_skyline___pre_sort_18e61538e8449047c2ebadffef7b4a0ad" kind="function"><name>Skyline_PreSort</name></member>
+    <member refid="class_skyline___pre_sort_1ae4b3d114e72653c2b3259b812416397" kind="function"><name>Instance</name></member>
+    <member refid="class_skyline___pre_sort_14b14814443c1999d61a249d20ccac7ba" kind="function"><name>SkylineQuery_Presorted</name></member>
+    <member refid="class_skyline___pre_sort_17f8ce8e206aef7b6503c195a30ee2443" kind="function"><name>PreSort</name></member>
+  </compound>
+  <compound refid="class_system_log" kind="class"><name>SystemLog</name>
+    <member refid="class_system_log_15dd503098e479e061b3e3e3428ff3d5d" kind="variable"><name>m_instance</name></member>
+    <member refid="class_system_log_16312dea36684b65445d00a9490de9869" kind="function"><name>Instance</name></member>
+    <member refid="class_system_log_113a7c6c9a3e17b692af31c82416191b0" kind="function"><name>WriteException</name></member>
+    <member refid="class_system_log_134b464465ea413a95865f5eb7e3af41a" kind="function"><name>SystemLog</name></member>
+  </compound>
+  <compound refid="class_user_define__1" kind="class"><name>UserDefine_1</name>
+    <member refid="class_user_define__1_11d150e4e5e939bf4b4a803a1f7cdb8d4" kind="function"><name>Page_Load</name></member>
+    <member refid="class_user_define__1_15de6fb3f99302207b1d102fbfd814c69" kind="function"><name>GridView1_SelectedIndexChanged</name></member>
+    <member refid="class_user_define__1_1c82fa9d5d28482d89a987b89a029412f" kind="function"><name>btnUpload_Click</name></member>
+  </compound>
+  <compound refid="class_user_define__2" kind="class"><name>UserDefine_2</name>
+    <member refid="class_user_define__2_1f2c3668025d7c5754bde56e107a630df" kind="function"><name>Page_Load</name></member>
+    <member refid="class_user_define__2_15b011d4483a8a941a435c3bbde949ae3" kind="function"><name>Button1_Click</name></member>
+    <member refid="class_user_define__2_1f7b63bcd828ad66a834225f56a505d6a" kind="function"><name>InitializeDataSetDdl</name></member>
+    <member refid="class_user_define__2_14fb5145a113acfe9cf6352cc5c940bd6" kind="function"><name>InitializeData</name></member>
+    <member refid="class_user_define__2_10c53ff63b611c1d629c20e8965177472" kind="function"><name>GetDataSet</name></member>
+    <member refid="class_user_define__2_1a8496ae541638350fecaa15c962fa64c" kind="function"><name>ReadFile2Table</name></member>
+    <member refid="class_user_define__2_143557ffdfc9f4257959a78e4da2fd887" kind="function"><name>blnBulk2DB</name></member>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections" kind="namespace"><name>System::Collections</name>
+  </compound>
+  <compound refid="namespace_system_1_1_configuration" kind="namespace"><name>System::Configuration</name>
+  </compound>
+  <compound refid="namespace_system_1_1_data" kind="namespace"><name>System::Data</name>
+  </compound>
+  <compound refid="namespace_system_1_1_data_1_1_sql_client" kind="namespace"><name>System::Data::SqlClient</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web" kind="namespace"><name>System::Web</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web_1_1_security" kind="namespace"><name>System::Web::Security</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web_1_1_u_i" kind="namespace"><name>System::Web::UI</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web_1_1_u_i_1_1_html_controls" kind="namespace"><name>System::Web::UI::HtmlControls</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web_1_1_u_i_1_1_web_controls" kind="namespace"><name>System::Web::UI::WebControls</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web_1_1_u_i_1_1_web_controls_1_1_web_parts" kind="namespace"><name>System::Web::UI::WebControls::WebParts</name>
+  </compound>
+  <compound refid="_basic_skyline_8cs" kind="file"><name>BasicSkyline.cs</name>
+  </compound>
+  <compound refid="_epsilon_skyline_8cs" kind="file"><name>EpsilonSkyline.cs</name>
+  </compound>
+  <compound refid="_skyline___pre_sort_8cs" kind="file"><name>Skyline_PreSort.cs</name>
+  </compound>
+  <compound refid="_system_log_8cs" kind="file"><name>SystemLog.cs</name>
+  </compound>
+  <compound refid="_default_8aspx_8cs" kind="file"><name>Default.aspx.cs</name>
+  </compound>
+  <compound refid="_skyline___n_b_a_8aspx_8cs" kind="file"><name>Skyline_NBA.aspx.cs</name>
+  </compound>
+  <compound refid="_user_define__1_8aspx_8cs" kind="file"><name>UserDefine_1.aspx.cs</name>
+  </compound>
+  <compound refid="_user_define__2_8aspx_8cs" kind="file"><name>UserDefine_2.aspx.cs</name>
+  </compound>
+  <compound refid="dir_61dc526cc7fc2c808e020bcae16a3467" kind="dir"><name>E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/</name>
+  </compound>
+  <compound refid="dir_a689c56ba3a1ffd6ceed7c9ddef65bf2" kind="dir"><name>E:/Documents and Settings/</name>
+  </compound>
+  <compound refid="dir_885cc87fac2d91e269af0a5a959fa5f6" kind="dir"><name>E:/</name>
+  </compound>
+  <compound refid="dir_13592b975c46001abc1f72b68f69414b" kind="dir"><name>E:/Documents and Settings/LeeWinnie/</name>
+  </compound>
+  <compound refid="dir_9d5c02e412ab2a4c3bda66a736aa8974" kind="dir"><name>E:/Documents and Settings/LeeWinnie/My Documents/</name>
+  </compound>
+  <compound refid="dir_be1a013e36ec80e421c42fe0b7b7c08f" kind="dir"><name>E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/</name>
+  </compound>
+  <compound refid="dir_0ec427a78afe8b33abbb9c2e7b5d9920" kind="dir"><name>E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/</name>
+  </compound>
+  <compound refid="dir_f38dca61c6bae99c9a70f71ab2540f5a" kind="dir"><name>E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/</name>
+  </compound>
+</doxygenindex>

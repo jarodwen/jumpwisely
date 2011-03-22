@@ -1,0 +1,123 @@
+.TH "UserDefine_2" 3 "26 Nov 2006" "Version 1.0" "Skyline Website" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UserDefine_2 \- User Defined skyline query: data upload, bilk add and computation.  
+
+.PP
+.SH SYNOPSIS
+.br
+.PP
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBPage_Load\fP (object sender, EventArgs e)"
+.br
+.ti -1c
+.RI "void \fBButton1_Click\fP (object sender, EventArgs e)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInitializeDataSetDdl\fP ()"
+.br
+.RI "\fIInitialize the drop down list on UserDefine_2.aspx with name of data table in DB. \fP"
+.ti -1c
+.RI "void \fBInitializeData\fP (string strSchemaID)"
+.br
+.RI "\fIRead data schema from DB, according the ID of schema user selected in the previous page. \fP"
+.ti -1c
+.RI "DataTable \fBGetDataSet\fP (string strDataTableName)"
+.br
+.RI "\fIRead data from DB according to the user's selection on data table in the drop down list. \fP"
+.ti -1c
+.RI "DataTable \fBReadFile2Table\fP (string[] strFileContent, DataTable dtData)"
+.br
+.RI "\fIRead data from the user text file and also do the bulk upload if necessary. \fP"
+.ti -1c
+.RI "bool \fBblnBulk2DB\fP (DataTable dtSource, string strTblName)"
+.br
+.RI "\fIBulk add data using SqlBulkCopy in .NET 2.0. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+User Defined skyline query: data upload, bilk add and computation. 
+
+<author>Jarod Wen</author> <Date>20:18pm, Nov 26th, 2006</Date> 
+.PP
+.SH "Member Function Documentation"
+.PP 
+.SS "void UserDefine_2.Page_Load (object sender, EventArgs e)\fC [protected]\fP"
+.PP
+.SS "void UserDefine_2.InitializeDataSetDdl ()\fC [private]\fP"
+.PP
+Initialize the drop down list on UserDefine_2.aspx with name of data table in DB. 
+.PP
+
+.SS "void UserDefine_2.InitializeData (string strSchemaID)\fC [private]\fP"
+.PP
+Read data schema from DB, according the ID of schema user selected in the previous page. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstrSchemaID\fP Schema ID
+.RE
+.PP
+
+.SS "void UserDefine_2.Button1_Click (object sender, EventArgs e)\fC [protected]\fP"
+.PP
+.SS "DataTable UserDefine_2.GetDataSet (string strDataTableName)\fC [private]\fP"
+.PP
+Read data from DB according to the user's selection on data table in the drop down list. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstrDataTableName\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.SS "DataTable UserDefine_2.ReadFile2Table (string[] strFileContent, DataTable dtData)\fC [private]\fP"
+.PP
+Read data from the user text file and also do the bulk upload if necessary. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstrFileContent\fP Contents of the file user uploaded
+.br
+\fIdtData\fP The structure of the table for storing
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Data table filled with data.
+.RE
+.PP
+
+.SS "bool UserDefine_2.blnBulk2DB (DataTable dtSource, string strTblName)\fC [private]\fP"
+.PP
+Bulk add data using SqlBulkCopy in .NET 2.0. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdtSource\fP Data Table containing data which will be added into database
+.br
+\fIstrTblName\fP The name of table user want to store as.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Whether the bulk add succeeds
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Skyline Website from the source code.

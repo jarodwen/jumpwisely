@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.1-p1">
+  <compounddef id="dir_be1a013e36ec80e421c42fe0b7b7c08f" kind="dir">
+    <compoundname>E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/</compoundname>
+    <innerdir refid="dir_61dc526cc7fc2c808e020bcae16a3467">E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/</innerdir>
+    <innerfile refid="_default_8aspx_8cs">Default.aspx.cs</innerfile>
+    <innerfile refid="_skyline___n_b_a_8aspx_8cs">Skyline_NBA.aspx.cs</innerfile>
+    <innerfile refid="_user_define__1_8aspx_8cs">UserDefine_1.aspx.cs</innerfile>
+    <innerfile refid="_user_define__2_8aspx_8cs">UserDefine_2.aspx.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/"/>
+  </compounddef>
+</doxygen>

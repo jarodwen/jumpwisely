@@ -1,0 +1,139 @@
+\section{Basic\-Skyline Class Reference}
+\label{class_basic_skyline}\index{BasicSkyline@{BasicSkyline}}
+\doxyref{Basic\-Skyline}{p.}{class_basic_skyline}: Basic Skyline computation using BNL.  
+
+
+Collaboration diagram for Basic\-Skyline:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Basic\-Skyline} ()
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static {\bf Basic\-Skyline} {\bf Instance} ()
+\item 
+static Array\-List {\bf Basic\-BNLSkyline} (Data\-Table dt, Array\-List column\-List)
+\begin{CompactList}\small\item\em Basic Skyline query using BNL. \item\end{CompactList}\item 
+static Array\-List {\bf Basic\-BNLSkyline} (Data\-Table dt, Array\-List column\-List, Array\-List Type\-List)
+\begin{CompactList}\small\item\em Restruct: Basic Skyline query using BNL. \item\end{CompactList}\item 
+static Array\-List {\bf Basic\-BNLSkyline} (Data\-Table dt, Array\-List column\-List, Array\-List Type\-List, Array\-List obj\-List)
+\begin{CompactList}\small\item\em Restruct: Basic Skyline query using BNL for presorted skyline query. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{CompactItemize}
+\item 
+static bool {\bf bln\-Dominate} (Data\-Row dr1, Data\-Row dr2, Array\-List column\-List, int int\-Type)
+\begin{CompactList}\small\item\em Skyline operator: dominate. \item\end{CompactList}\item 
+static bool {\bf bln\-Dominate} (Data\-Row dr1, Data\-Row dr2, Array\-List column\-List, Array\-List Type\-List)
+\begin{CompactList}\small\item\em Restruct: Skyline operator: dominate. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Private Attributes}
+\begin{CompactItemize}
+\item 
+static {\bf Basic\-Skyline} {\bf m\_\-instance} = null
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Basic\-Skyline}{p.}{class_basic_skyline}: Basic Skyline computation using BNL. 
+
+$<$author$>$Jarod Wen$<$/author$>$ $<$Date$>$20:18pm, Nov 26th, 2006$<$/Date$>$ 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{BasicSkyline@{Basic\-Skyline}!BasicSkyline@{BasicSkyline}}
+\index{BasicSkyline@{BasicSkyline}!BasicSkyline@{Basic\-Skyline}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Basic\-Skyline.Basic\-Skyline ()}\label{class_basic_skyline_19020e4318d51d4cff02706266da90f3}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{BasicSkyline@{Basic\-Skyline}!Instance@{Instance}}
+\index{Instance@{Instance}!BasicSkyline@{Basic\-Skyline}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}static {\bf Basic\-Skyline} Basic\-Skyline.Instance ()\hspace{0.3cm}{\tt  [static]}}\label{class_basic_skyline_545a96d268b6537fafcdb7e7b496fa9e}
+
+
+\index{BasicSkyline@{Basic\-Skyline}!BasicBNLSkyline@{BasicBNLSkyline}}
+\index{BasicBNLSkyline@{BasicBNLSkyline}!BasicSkyline@{Basic\-Skyline}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}static Array\-List Basic\-Skyline.Basic\-BNLSkyline (Data\-Table {\em dt}, Array\-List {\em column\-List})\hspace{0.3cm}{\tt  [static]}}\label{class_basic_skyline_f8c8e370d1e5300c82806621e70b5a32}
+
+
+Basic Skyline query using BNL. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em dt}]Source Data Table\item[{\em column\-List}]Columns on which Skyline query will be processed\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The list of index of all the skyline objects in source data table\end{Desc}
+\index{BasicSkyline@{Basic\-Skyline}!BasicBNLSkyline@{BasicBNLSkyline}}
+\index{BasicBNLSkyline@{BasicBNLSkyline}!BasicSkyline@{Basic\-Skyline}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}static Array\-List Basic\-Skyline.Basic\-BNLSkyline (Data\-Table {\em dt}, Array\-List {\em column\-List}, Array\-List {\em Type\-List})\hspace{0.3cm}{\tt  [static]}}\label{class_basic_skyline_a3885250541ce477c2ae5e28fde15e4b}
+
+
+Restruct: Basic Skyline query using BNL. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em dt}]Source Data Table\item[{\em column\-List}]Columns on which Skyline query will be processed\item[{\em Type\-List}]The list of comparation type on each columns in the column\-List\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The list of index of all the skyline objects in source data table\end{Desc}
+\index{BasicSkyline@{Basic\-Skyline}!BasicBNLSkyline@{BasicBNLSkyline}}
+\index{BasicBNLSkyline@{BasicBNLSkyline}!BasicSkyline@{Basic\-Skyline}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}static Array\-List Basic\-Skyline.Basic\-BNLSkyline (Data\-Table {\em dt}, Array\-List {\em column\-List}, Array\-List {\em Type\-List}, Array\-List {\em obj\-List})\hspace{0.3cm}{\tt  [static]}}\label{class_basic_skyline_90177e10ddb2a3b72276b3731ff04158}
+
+
+Restruct: Basic Skyline query using BNL for presorted skyline query. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em dt}]Source Data Table\item[{\em column\-List}]Columns on which Skyline query will be processed\item[{\em Type\-List}]The list of comparation type on each columns in the column\-List\item[{\em obj\-List}]The list of the rows to be compared.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The list of index of all the skyline objects in source data table\end{Desc}
+\index{BasicSkyline@{Basic\-Skyline}!blnDominate@{blnDominate}}
+\index{blnDominate@{blnDominate}!BasicSkyline@{Basic\-Skyline}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}static bool Basic\-Skyline.bln\-Dominate (Data\-Row {\em dr1}, Data\-Row {\em dr2}, Array\-List {\em column\-List}, int {\em int\-Type})\hspace{0.3cm}{\tt  [static, private]}}\label{class_basic_skyline_f21bf043f066f7af784c28f001cf6b42}
+
+
+Skyline operator: dominate. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em dr1}]Left data object of the operator.\item[{\em dr2}]Right data object of the operator.\item[{\em column\-List}]Columns on which Skyline query will be processed\item[{\em int\-Type}]Comparation type: 0-Larger better; 1-Smaller better.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Whether left data object dominate the right one.\end{Desc}
+\index{BasicSkyline@{Basic\-Skyline}!blnDominate@{blnDominate}}
+\index{blnDominate@{blnDominate}!BasicSkyline@{Basic\-Skyline}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}static bool Basic\-Skyline.bln\-Dominate (Data\-Row {\em dr1}, Data\-Row {\em dr2}, Array\-List {\em column\-List}, Array\-List {\em Type\-List})\hspace{0.3cm}{\tt  [static, private]}}\label{class_basic_skyline_8a06b5c49a50aff03aa13b049dd220af}
+
+
+Restruct: Skyline operator: dominate. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em dr1}]Left data object of the operator.\item[{\em dr2}]Right data object of the operator.\item[{\em column\-List}]Columns on which Skyline query will be processed\item[{\em int\-Type}]Comparation type: 0-Larger better; 1-Smaller better.\item[{\em Type\-List}]The list of comparation type on each columns in the column\-List\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Whether left data object dominate the right one.\end{Desc}
+
+
+\subsection{Member Data Documentation}
+\index{BasicSkyline@{Basic\-Skyline}!m_instance@{m\_\-instance}}
+\index{m_instance@{m\_\-instance}!BasicSkyline@{Basic\-Skyline}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Basic\-Skyline} {\bf Basic\-Skyline.m\_\-instance} = null\hspace{0.3cm}{\tt  [static, private]}}\label{class_basic_skyline_a0b9ff43856b8146ac30e87175111212}
+
+
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+E:/Documents and Settings/Lee\-Winnie/My Documents/Visual Studio 2005/Web\-Sites/Skyline\-Web\-Site/App\_\-Code/{\bf Basic\-Skyline.cs}\end{CompactItemize}

@@ -1,0 +1,111 @@
+\section{User\-Define\_\-2 Class Reference}
+\label{class_user_define__2}\index{UserDefine_2@{UserDefine\_\-2}}
+User Defined skyline query: data upload, bilk add and computation.  
+
+
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void {\bf Page\_\-Load} (object sender, Event\-Args e)
+\item 
+void {\bf Button1\_\-Click} (object sender, Event\-Args e)
+\end{CompactItemize}
+\subsection*{Private Member Functions}
+\begin{CompactItemize}
+\item 
+void {\bf Initialize\-Data\-Set\-Ddl} ()
+\begin{CompactList}\small\item\em Initialize the drop down list on User\-Define\_\-2.aspx with name of data table in DB. \item\end{CompactList}\item 
+void {\bf Initialize\-Data} (string str\-Schema\-ID)
+\begin{CompactList}\small\item\em Read data schema from DB, according the ID of schema user selected in the previous page. \item\end{CompactList}\item 
+Data\-Table {\bf Get\-Data\-Set} (string str\-Data\-Table\-Name)
+\begin{CompactList}\small\item\em Read data from DB according to the user's selection on data table in the drop down list. \item\end{CompactList}\item 
+Data\-Table {\bf Read\-File2Table} (string[$\,$] str\-File\-Content, Data\-Table dt\-Data)
+\begin{CompactList}\small\item\em Read data from the user text file and also do the bulk upload if necessary. \item\end{CompactList}\item 
+bool {\bf bln\-Bulk2DB} (Data\-Table dt\-Source, string str\-Tbl\-Name)
+\begin{CompactList}\small\item\em Bulk add data using Sql\-Bulk\-Copy in .NET 2.0. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+User Defined skyline query: data upload, bilk add and computation. 
+
+$<$author$>$Jarod Wen$<$/author$>$ $<$Date$>$20:18pm, Nov 26th, 2006$<$/Date$>$ 
+
+
+
+\subsection{Member Function Documentation}
+\index{UserDefine_2@{User\-Define\_\-2}!Page_Load@{Page\_\-Load}}
+\index{Page_Load@{Page\_\-Load}!UserDefine_2@{User\-Define\_\-2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void User\-Define\_\-2.Page\_\-Load (object {\em sender}, Event\-Args {\em e})\hspace{0.3cm}{\tt  [protected]}}\label{class_user_define__2_f2c3668025d7c5754bde56e107a630df}
+
+
+\index{UserDefine_2@{User\-Define\_\-2}!InitializeDataSetDdl@{InitializeDataSetDdl}}
+\index{InitializeDataSetDdl@{InitializeDataSetDdl}!UserDefine_2@{User\-Define\_\-2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void User\-Define\_\-2.Initialize\-Data\-Set\-Ddl ()\hspace{0.3cm}{\tt  [private]}}\label{class_user_define__2_f7b63bcd828ad66a834225f56a505d6a}
+
+
+Initialize the drop down list on User\-Define\_\-2.aspx with name of data table in DB. 
+
+\index{UserDefine_2@{User\-Define\_\-2}!InitializeData@{InitializeData}}
+\index{InitializeData@{InitializeData}!UserDefine_2@{User\-Define\_\-2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void User\-Define\_\-2.Initialize\-Data (string {\em str\-Schema\-ID})\hspace{0.3cm}{\tt  [private]}}\label{class_user_define__2_4fb5145a113acfe9cf6352cc5c940bd6}
+
+
+Read data schema from DB, according the ID of schema user selected in the previous page. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em str\-Schema\-ID}]Schema ID\end{description}
+\end{Desc}
+\index{UserDefine_2@{User\-Define\_\-2}!Button1_Click@{Button1\_\-Click}}
+\index{Button1_Click@{Button1\_\-Click}!UserDefine_2@{User\-Define\_\-2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void User\-Define\_\-2.Button1\_\-Click (object {\em sender}, Event\-Args {\em e})\hspace{0.3cm}{\tt  [protected]}}\label{class_user_define__2_5b011d4483a8a941a435c3bbde949ae3}
+
+
+\index{UserDefine_2@{User\-Define\_\-2}!GetDataSet@{GetDataSet}}
+\index{GetDataSet@{GetDataSet}!UserDefine_2@{User\-Define\_\-2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Data\-Table User\-Define\_\-2.Get\-Data\-Set (string {\em str\-Data\-Table\-Name})\hspace{0.3cm}{\tt  [private]}}\label{class_user_define__2_0c53ff63b611c1d629c20e8965177472}
+
+
+Read data from DB according to the user's selection on data table in the drop down list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em str\-Data\-Table\-Name}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]\end{Desc}
+\index{UserDefine_2@{User\-Define\_\-2}!ReadFile2Table@{ReadFile2Table}}
+\index{ReadFile2Table@{ReadFile2Table}!UserDefine_2@{User\-Define\_\-2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Data\-Table User\-Define\_\-2.Read\-File2Table (string[$\,$] {\em str\-File\-Content}, Data\-Table {\em dt\-Data})\hspace{0.3cm}{\tt  [private]}}\label{class_user_define__2_a8496ae541638350fecaa15c962fa64c}
+
+
+Read data from the user text file and also do the bulk upload if necessary. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em str\-File\-Content}]Contents of the file user uploaded\item[{\em dt\-Data}]The structure of the table for storing\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Data table filled with data.\end{Desc}
+\index{UserDefine_2@{User\-Define\_\-2}!blnBulk2DB@{blnBulk2DB}}
+\index{blnBulk2DB@{blnBulk2DB}!UserDefine_2@{User\-Define\_\-2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool User\-Define\_\-2.bln\-Bulk2DB (Data\-Table {\em dt\-Source}, string {\em str\-Tbl\-Name})\hspace{0.3cm}{\tt  [private]}}\label{class_user_define__2_43557ffdfc9f4257959a78e4da2fd887}
+
+
+Bulk add data using Sql\-Bulk\-Copy in .NET 2.0. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em dt\-Source}]Data Table containing data which will be added into database\item[{\em str\-Tbl\-Name}]The name of table user want to store as.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Whether the bulk add succeeds\end{Desc}
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+E:/Documents and Settings/Lee\-Winnie/My Documents/Visual Studio 2005/Web\-Sites/Skyline\-Web\-Site/{\bf User\-Define\_\-2.aspx.cs}\end{CompactItemize}

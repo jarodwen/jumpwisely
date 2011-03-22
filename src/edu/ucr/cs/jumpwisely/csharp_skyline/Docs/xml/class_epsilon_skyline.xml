@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.1-p1">
+  <compounddef id="class_epsilon_skyline" kind="class" prot="public">
+    <compoundname>EpsilonSkyline</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_epsilon_skyline_1e65a7a116dc7a5231a460c20a69fb9de" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_epsilon_skyline" kindref="compound">EpsilonSkyline</ref></type>
+        <definition>EpsilonSkyline EpsilonSkyline.m_instance</definition>
+        <argsstring></argsstring>
+        <name>m_instance</name>
+        <initializer> null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" line="19" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_epsilon_skyline_172a126a4d0d3d677b0e6b30d7785cfd2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EpsilonSkyline.EpsilonSkyline</definition>
+        <argsstring>()</argsstring>
+        <name>EpsilonSkyline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" line="21" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" bodystart="20" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_epsilon_skyline_1916975cc1add75e369f0c39f8a9609d0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_epsilon_skyline" kindref="compound">EpsilonSkyline</ref></type>
+        <definition>static EpsilonSkyline EpsilonSkyline.Instance</definition>
+        <argsstring>()</argsstring>
+        <name>Instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" line="27" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" bodystart="26" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_epsilon_skyline_11a71cdb83a2b17c45ec117f5538c3fac" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DataTable</type>
+        <definition>static DataTable EpsilonSkyline.dtNormalize</definition>
+        <argsstring>(DataTable dtSource)</argsstring>
+        <name>dtNormalize</name>
+        <param>
+          <type>DataTable</type>
+          <declname>dtSource</declname>
+        </param>
+        <briefdescription>
+<para>Normalize data in dtSource to N(0, 1). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dtSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source Data Table</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Normalized data table</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" line="146" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" bodystart="145" bodyend="158"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_epsilon_skyline_19accf2bf51afe01007f2ec6e2b0b1bd2" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DataTable</type>
+        <definition>static DataTable EpsilonSkyline.dtDataFile2Table</definition>
+        <argsstring>(string FileString)</argsstring>
+        <name>dtDataFile2Table</name>
+        <param>
+          <type>string</type>
+          <declname>FileString</declname>
+        </param>
+        <briefdescription>
+<para>Read data from the string of a text file to a datatable. The format of the string is Col_1...Col_n<linebreak/>
+. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FileString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contents of the text file</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Data table filled with the data from the text file</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" line="167" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" bodystart="166" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="class_epsilon_skyline_1b6354c7ddc243f11e6c2d5eb9f16036c" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList</type>
+        <definition>static ArrayList EpsilonSkyline.BasicBNLSkyline</definition>
+        <argsstring>(DataTable dt)</argsstring>
+        <name>BasicBNLSkyline</name>
+        <param>
+          <type>DataTable</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Basic BNL algorithm on Skyline query. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source Data table</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The list containing all the index of skyline objects</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" line="207" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" bodystart="206" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_epsilon_skyline_17a1f69b965a81d949bcca3e603e8a086" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool EpsilonSkyline.blnDominate</definition>
+        <argsstring>(DataRow dr1, DataRow dr2, int intType)</argsstring>
+        <name>blnDominate</name>
+        <param>
+          <type>DataRow</type>
+          <declname>dr1</declname>
+        </param>
+        <param>
+          <type>DataRow</type>
+          <declname>dr2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>intType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Skyline operator: dominate</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dr1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left data object of the operator.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dr2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right data object of the operator.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>columnList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Columns on which Skyline query will be processed</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>intType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Comparation type: 0-Larger better; 1-Smaller better.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Whether left data object dominate the right one.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" line="244" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" bodystart="243" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="class_epsilon_skyline_1c15de88b5212b3d33540db2192cf2cc8" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList</type>
+        <definition>static ArrayList EpsilonSkyline.Epsilon_BNLSkyline</definition>
+        <argsstring>(DataTable dt, double dblEpsilon)</argsstring>
+        <name>Epsilon_BNLSkyline</name>
+        <param>
+          <type>DataTable</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dblEpsilon</declname>
+        </param>
+        <briefdescription>
+<para>Epsilon_BNL algorithm for Skyline query. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source data table</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dblEpsilon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value of Epsilon</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The list containing all the index of Epsilon skyline objects</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" line="279" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" bodystart="278" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="class_epsilon_skyline_1ce1fce86298a280391417e7eb4490f41" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool EpsilonSkyline.blnEpsilon_Dominate</definition>
+        <argsstring>(DataRow dr1, DataRow dr2, int intType, double dblEpsilon)</argsstring>
+        <name>blnEpsilon_Dominate</name>
+        <param>
+          <type>DataRow</type>
+          <declname>dr1</declname>
+        </param>
+        <param>
+          <type>DataRow</type>
+          <declname>dr2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>intType</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dblEpsilon</declname>
+        </param>
+        <briefdescription>
+<para>Epsilon-dominate operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dr1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left data object of the operator.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dr2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right data object of the operator.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>columnList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Columns on which Skyline query will be processed</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>intType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Comparation type: 0-Larger better; 1-Smaller better.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dblEpsilon</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Whether left data object dominate the right one.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" line="324" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" bodystart="323" bodyend="351"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Epsilon: Class of Epsilon Skyline. </para>    </briefdescription>
+    <detaileddescription>
+<para>&lt;author&gt;Jarod Wen&lt;/author&gt; &lt;Date&gt;20:18pm, Nov 26th, 2006&lt;/Date&gt; </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="21">
+        <label>EpsilonSkyline</label>
+        <link refid="class_epsilon_skyline"/>
+        <childnode refid="21" relation="usage">
+          <edgelabel>m_instance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" line="18" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/App_Code/EpsilonSkyline.cs" bodystart="17" bodyend="352"/>
+    <listofallmembers>
+      <member refid="class_epsilon_skyline_1b6354c7ddc243f11e6c2d5eb9f16036c" prot="private" virt="non-virtual"><scope>EpsilonSkyline</scope><name>BasicBNLSkyline</name></member>
+      <member refid="class_epsilon_skyline_17a1f69b965a81d949bcca3e603e8a086" prot="private" virt="non-virtual"><scope>EpsilonSkyline</scope><name>blnDominate</name></member>
+      <member refid="class_epsilon_skyline_1ce1fce86298a280391417e7eb4490f41" prot="private" virt="non-virtual"><scope>EpsilonSkyline</scope><name>blnEpsilon_Dominate</name></member>
+      <member refid="class_epsilon_skyline_19accf2bf51afe01007f2ec6e2b0b1bd2" prot="private" virt="non-virtual"><scope>EpsilonSkyline</scope><name>dtDataFile2Table</name></member>
+      <member refid="class_epsilon_skyline_11a71cdb83a2b17c45ec117f5538c3fac" prot="public" virt="non-virtual"><scope>EpsilonSkyline</scope><name>dtNormalize</name></member>
+      <member refid="class_epsilon_skyline_1c15de88b5212b3d33540db2192cf2cc8" prot="private" virt="non-virtual"><scope>EpsilonSkyline</scope><name>Epsilon_BNLSkyline</name></member>
+      <member refid="class_epsilon_skyline_172a126a4d0d3d677b0e6b30d7785cfd2" prot="public" virt="non-virtual"><scope>EpsilonSkyline</scope><name>EpsilonSkyline</name></member>
+      <member refid="class_epsilon_skyline_1916975cc1add75e369f0c39f8a9609d0" prot="public" virt="non-virtual"><scope>EpsilonSkyline</scope><name>Instance</name></member>
+      <member refid="class_epsilon_skyline_1e65a7a116dc7a5231a460c20a69fb9de" prot="private" virt="non-virtual"><scope>EpsilonSkyline</scope><name>m_instance</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,157 @@
+\section{Epsilon\-Skyline Class Reference}
+\label{class_epsilon_skyline}\index{EpsilonSkyline@{EpsilonSkyline}}
+Epsilon: Class of Epsilon Skyline.  
+
+
+Collaboration diagram for Epsilon\-Skyline:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Epsilon\-Skyline} ()
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static {\bf Epsilon\-Skyline} {\bf Instance} ()
+\item 
+static Data\-Table {\bf dt\-Normalize} (Data\-Table dt\-Source)
+\begin{CompactList}\small\item\em Normalize data in dt\-Source to N(0, 1). \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{CompactItemize}
+\item 
+static Data\-Table {\bf dt\-Data\-File2Table} (string File\-String)
+\begin{CompactList}\small\item\em Read data from the string of a text file to a datatable. The format of the string is Col\_\-1...Col\_\-n\par
+. \item\end{CompactList}\item 
+static Array\-List {\bf Basic\-BNLSkyline} (Data\-Table dt)
+\begin{CompactList}\small\item\em Basic BNL algorithm on Skyline query. \item\end{CompactList}\item 
+static bool {\bf bln\-Dominate} (Data\-Row dr1, Data\-Row dr2, int int\-Type)
+\item 
+static Array\-List {\bf Epsilon\_\-BNLSkyline} (Data\-Table dt, double dbl\-Epsilon)
+\begin{CompactList}\small\item\em Epsilon\_\-BNL algorithm for Skyline query. \item\end{CompactList}\item 
+static bool {\bf bln\-Epsilon\_\-Dominate} (Data\-Row dr1, Data\-Row dr2, int int\-Type, double dbl\-Epsilon)
+\begin{CompactList}\small\item\em Epsilon-dominate operator. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Private Attributes}
+\begin{CompactItemize}
+\item 
+static {\bf Epsilon\-Skyline} {\bf m\_\-instance} = null
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Epsilon: Class of Epsilon Skyline. 
+
+$<$author$>$Jarod Wen$<$/author$>$ $<$Date$>$20:18pm, Nov 26th, 2006$<$/Date$>$ 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{EpsilonSkyline@{Epsilon\-Skyline}!EpsilonSkyline@{EpsilonSkyline}}
+\index{EpsilonSkyline@{EpsilonSkyline}!EpsilonSkyline@{Epsilon\-Skyline}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Epsilon\-Skyline.Epsilon\-Skyline ()}\label{class_epsilon_skyline_72a126a4d0d3d677b0e6b30d7785cfd2}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{EpsilonSkyline@{Epsilon\-Skyline}!Instance@{Instance}}
+\index{Instance@{Instance}!EpsilonSkyline@{Epsilon\-Skyline}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}static {\bf Epsilon\-Skyline} Epsilon\-Skyline.Instance ()\hspace{0.3cm}{\tt  [static]}}\label{class_epsilon_skyline_916975cc1add75e369f0c39f8a9609d0}
+
+
+\index{EpsilonSkyline@{Epsilon\-Skyline}!dtNormalize@{dtNormalize}}
+\index{dtNormalize@{dtNormalize}!EpsilonSkyline@{Epsilon\-Skyline}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}static Data\-Table Epsilon\-Skyline.dt\-Normalize (Data\-Table {\em dt\-Source})\hspace{0.3cm}{\tt  [static]}}\label{class_epsilon_skyline_1a71cdb83a2b17c45ec117f5538c3fac}
+
+
+Normalize data in dt\-Source to N(0, 1). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em dt\-Source}]Source Data Table\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Normalized data table\end{Desc}
+\index{EpsilonSkyline@{Epsilon\-Skyline}!dtDataFile2Table@{dtDataFile2Table}}
+\index{dtDataFile2Table@{dtDataFile2Table}!EpsilonSkyline@{Epsilon\-Skyline}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}static Data\-Table Epsilon\-Skyline.dt\-Data\-File2Table (string {\em File\-String})\hspace{0.3cm}{\tt  [static, private]}}\label{class_epsilon_skyline_9accf2bf51afe01007f2ec6e2b0b1bd2}
+
+
+Read data from the string of a text file to a datatable. The format of the string is Col\_\-1...Col\_\-n\par
+. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em File\-String}]Contents of the text file\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Data table filled with the data from the text file\end{Desc}
+\index{EpsilonSkyline@{Epsilon\-Skyline}!BasicBNLSkyline@{BasicBNLSkyline}}
+\index{BasicBNLSkyline@{BasicBNLSkyline}!EpsilonSkyline@{Epsilon\-Skyline}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}static Array\-List Epsilon\-Skyline.Basic\-BNLSkyline (Data\-Table {\em dt})\hspace{0.3cm}{\tt  [static, private]}}\label{class_epsilon_skyline_b6354c7ddc243f11e6c2d5eb9f16036c}
+
+
+Basic BNL algorithm on Skyline query. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em dt}]Source Data table\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The list containing all the index of skyline objects\end{Desc}
+\index{EpsilonSkyline@{Epsilon\-Skyline}!blnDominate@{blnDominate}}
+\index{blnDominate@{blnDominate}!EpsilonSkyline@{Epsilon\-Skyline}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}static bool Epsilon\-Skyline.bln\-Dominate (Data\-Row {\em dr1}, Data\-Row {\em dr2}, int {\em int\-Type})\hspace{0.3cm}{\tt  [static, private]}}\label{class_epsilon_skyline_7a1f69b965a81d949bcca3e603e8a086}
+
+
+Skyline operator: dominate
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em dr1}]Left data object of the operator.\item[{\em dr2}]Right data object of the operator.\item[{\em column\-List}]Columns on which Skyline query will be processed\item[{\em int\-Type}]Comparation type: 0-Larger better; 1-Smaller better.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Whether left data object dominate the right one.\end{Desc}
+\index{EpsilonSkyline@{Epsilon\-Skyline}!Epsilon_BNLSkyline@{Epsilon\_\-BNLSkyline}}
+\index{Epsilon_BNLSkyline@{Epsilon\_\-BNLSkyline}!EpsilonSkyline@{Epsilon\-Skyline}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}static Array\-List Epsilon\-Skyline.Epsilon\_\-BNLSkyline (Data\-Table {\em dt}, double {\em dbl\-Epsilon})\hspace{0.3cm}{\tt  [static, private]}}\label{class_epsilon_skyline_c15de88b5212b3d33540db2192cf2cc8}
+
+
+Epsilon\_\-BNL algorithm for Skyline query. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em dt}]Source data table\item[{\em dbl\-Epsilon}]Value of Epsilon\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The list containing all the index of Epsilon skyline objects\end{Desc}
+\index{EpsilonSkyline@{Epsilon\-Skyline}!blnEpsilon_Dominate@{blnEpsilon\_\-Dominate}}
+\index{blnEpsilon_Dominate@{blnEpsilon\_\-Dominate}!EpsilonSkyline@{Epsilon\-Skyline}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}static bool Epsilon\-Skyline.bln\-Epsilon\_\-Dominate (Data\-Row {\em dr1}, Data\-Row {\em dr2}, int {\em int\-Type}, double {\em dbl\-Epsilon})\hspace{0.3cm}{\tt  [static, private]}}\label{class_epsilon_skyline_ce1fce86298a280391417e7eb4490f41}
+
+
+Epsilon-dominate operator. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em dr1}]Left data object of the operator.\item[{\em dr2}]Right data object of the operator.\item[{\em column\-List}]Columns on which Skyline query will be processed\item[{\em int\-Type}]Comparation type: 0-Larger better; 1-Smaller better.\item[{\em dbl\-Epsilon}]\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Whether left data object dominate the right one.\end{Desc}
+
+
+\subsection{Member Data Documentation}
+\index{EpsilonSkyline@{Epsilon\-Skyline}!m_instance@{m\_\-instance}}
+\index{m_instance@{m\_\-instance}!EpsilonSkyline@{Epsilon\-Skyline}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Epsilon\-Skyline} {\bf Epsilon\-Skyline.m\_\-instance} = null\hspace{0.3cm}{\tt  [static, private]}}\label{class_epsilon_skyline_e65a7a116dc7a5231a460c20a69fb9de}
+
+
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+E:/Documents and Settings/Lee\-Winnie/My Documents/Visual Studio 2005/Web\-Sites/Skyline\-Web\-Site/App\_\-Code/{\bf Epsilon\-Skyline.cs}\end{CompactItemize}

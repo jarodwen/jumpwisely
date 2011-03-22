@@ -1,0 +1,616 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<style>BODY, P, DIV, H1, H2, H3, H4, H5, H6, ADDRESS, OL, UL, LI, TITLE, TD, OPTION, SELECT 
+{ 
+ font-family: Verdana 
+}
+BODY, P, DIV, ADDRESS, OL, UL, LI, TITLE, TD, OPTION, SELECT  
+{  
+  font-size: 10.0pt; 
+  margin-top:0pt;  
+  margin-bottom:0pt;  
+} 
+BODY, P
+{
+  margin-left:0pt; 
+  margin-right:0pt;
+}
+BODY
+{
+  background: white;
+  margin: 6px;
+  padding: 0px;
+}
+h6 { font-size: 10pt }
+h5 { font-size: 11pt }
+h4 { font-size: 12pt }
+h3 { font-size: 13pt }
+h2 { font-size: 14pt }
+h1 { font-size: 16pt }
+blockquote { padding: 10px; border: 1px #DDDDDD dashed }
+a img {	border: 0; }
+table.zeroBorder {
+	border-width: 1px 1px 1px 1px;
+	border-style: dotted dotted dotted dotted;
+	border-color: gray gray gray gray;
+}
+table.zeroBorder th {
+	border-width: 1px 1px 1px 1px;
+	border-style: dotted dotted dotted dotted;
+	border-color: gray gray gray gray;
+}
+table.zeroBorder td {
+	border-width: 1px 1px 1px 1px;
+	border-style: dotted dotted dotted dotted;
+	border-color: gray gray gray gray;
+}
+.hiddenStyle {
+		visibility: hidden; 
+		position: absolute;
+		z-Index: 1;
+		paddingRight: 0;
+		background: white
+	}
+.misspell { background-image: url('/images/misspell.gif'); background-repeat: repeat-x; background-position: bottom }
+@media screen {
+.pb { border-top: 1px dashed #C0C0C0; border-bottom: 1px dashed #C0C0C0 }
+.writely-comment { font-size: 9pt; line-height: 1.4em; padding: 1px; border: 1px dashed #C0C0C0 }
+}
+@media print {
+.pb { border-top: 0px; border-bottom: 0px }
+.writely-comment { display: none }
+}
+@media screen,print {
+.pb { height: 1px }
+}
+</style></head>
+<title>Skyline Website: Main Page</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<body revision='df2h4ps3_7gnscw7:232'>
+<div class="tabs">
+  <ul>
+    <li id="current"><a href="index.html"><span>Main&nbsp;Page</span></a></li>
+    <li><a href="namespaces.html"><span>Packages</span></a></li>
+    <li><a href="annotated.html"><span>Classes</span></a></li>
+    <li><a href="files.html"><span>Files</span></a></li>
+  </ul></div>
+<h1>
+  Skyline WebSite Developer Manual 1.0
+</h1>
+<br>
+<h2>
+  1. General: Skyline Website and this document<a name=General></a>
+</h2>
+<p>
+  This Website is for research purpose on Skyline query in Database research
+  field. Although it is just a course project for the CSG130 Introduction to
+  Database System in Northeastern University, under the instruction of Professor
+  Donghui Zhang, we plan to make it improved for the continue research on
+  Skyline query in on-line environment.<br>
+</p>
+<h3>
+  1.0 Copyleft
+</h3>
+This part is always the most important, and also, the least important part of a
+developer manual, so we entitle it to be 0. This document is under the
+protection of GFDL<br>
+<br>
+<pre>  Copyright (C)  <var>2006 Jarod Wen</var>.<br>  Permission is granted to copy, distribute and/or modify this document<br>  under the terms of the GNU Free Documentation License, Version 1.1<br>  or any later version published by the Free Software Foundation;<br>  A copy of the license is included in the section entitled ``GNU<br>  Free Documentation License''.</pre>
+<br>
+The code of Skyline website, are under the GNU General Public License (see
+<a href=http://docs.google.com/View?docid=df2h4ps3_7gnscw7#Licenses title=GPL>GPL</a>).
+This site is based on .NET 2.0, but still we will try to share these code with
+all the researchers in this field. So all the codes are under the protection of
+GNU General Public License. Although it is a little funny to use GPL on a C#
+code, we think it is necessary to all of you who are reading this documents.
+<h3>
+  1.1 What is Skyline?<br>
+</h3>
+Skyline query has been well known as the Maximum Vector problem, Pareto Set,
+which means that to find objects in a data set who will not be dominated by any
+other objects. Here "dominate" means that: if object A dominate B, then all the
+attributions of A will have no worse value than B, and there is at least one
+attribution for A which is better than the corresponded attribution in B. The
+comparation for different attributions will be different: some may be
+"large-better", while others will be "smaller-better".<br>
+<br>
+A classical example on 2-D skyline query is the "Hotel-near-beach" problem.
+Assume you will select a hotel near the beach for your holiday, and you have a
+dataset containing all the information you will use: for each hotel, there are
+their price and the distance to the beach. Your aim is to find the best one who
+will have lower price and short distance to the beach. The following figure,
+which is from The Skyline Operator by Stephan B¨orzs¨onyi, Donald Kossmann and
+Konrad Stocker, can give a better view on this problem.<br>
+<div style=TEXT-ALIGN:center>
+  <img align=middle height=349 src=Skyline_WebSite_Deve_images/df2h4ps3_8g8wfvv.jpg title="Skyline Hotel Problem" width=505><br>
+  <div style=TEXT-ALIGN:left>
+    <br>
+    <h3>
+      1.2 How to compute the skyline object?
+    </h3>
+    In the database research field, there are already a lot of algorithms for
+    the skyline query for different environment. Following is a list on the most
+    common used algorithms in the research and discussion, with the source they
+    are from:<br>
+    <br>
+    <ul>
+      <li>
+        BNL(Block-nested-loops), [BKS01]: The most basic and straight-forward
+        algorithm, which is also the basic algorithm in our system. This
+        algorithm requires all-pair compare for all the data objects so the
+        efficiency is theoretically bad. However, in the actuarial practice, it
+        always shows good performance because there are no other tricks which
+        may take more efforts:)
+      </li>
+      <li>
+        D&amp;C(Divide-and-conquer), [BKS01]:
+      </li>
+      <li>
+        SFS(Sort Filter Skyline), [CGGL03]:
+      </li>
+      <li>
+        FLET(Fast Linear Expected-time), [BCL90]:
+      </li>
+      <li>
+        Bitmap, [TEO01]:
+      </li>
+      <li>
+        B-Tree Index, [TEO01]:
+      </li>
+      <li>
+        NN, [KRR02]:
+      </li>
+    </ul>
+    <br>
+    More and more efficient algorithms will come out for better performance on
+    skyline query, which is also the purpose for our website.<br>
+    <h3>
+      1.3 About the platform: ASP.NET 2.0
+    </h3>
+    Due to the require of the course project, the Skyline Website is constructed
+    on the .NET Framework 2.0 using C#, edited in VS2005.<br>
+    <br>
+    <h3>
+      1.4 About this website and the Task List<br>
+    </h3>
+    This site is for the research aim, so with the going on research in Skyline
+    Computation, more tests and features will be added in. Till now the
+    performance we achieved can be far away from satisfication. So the following
+    task list will show the direction we will plunge into in the future.<br>
+    <br>
+    <ul>
+      <li>
+        Efficient algorithms and implementation on Skyline computation for
+        existing data set.
+      </li>
+      <li>
+        User defined data schemas, data set and query requirement.
+      </li>
+      <li>
+        More algorithms embedded into the website for comparation between them.
+      </li>
+    </ul>
+    <h3>
+      1.5 About this document
+    </h3>
+    This document is developer-aimed, for the possible improvement, suggestions
+    and modifications from any researchers and other else.<br>
+    <br>
+    Lots of the description on the algorithms we used in our website can be
+    found from their original papers, and the code here will not guarantee to be
+    the best implementation, so try to give us your cool codes on them to
+    improve the performance!<br>
+    <br>
+    <h2>
+      2. Roadmap: Whole structure of the website<a name=Roadmap></a>
+    </h2>
+    Until Nov 29th, 2006, when it is the deadline of the project for the course,
+    the whole website just achieved a few features on the skyline computation:
+    basic skyline query using BNL algorithm and presorting algorithm; user
+    defined data schema and data set.<br>
+    <br>
+    The whole project contains the following folders and files:<br>
+    <br>
+    +Skyline Website<br>
+    |---+----App_Code<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |--------------------BasicSkyline.cs<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |--------------------EpsilonSkyline.cs<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |--------------------Skyline_Presort.cs<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |--------------------SystemLog.cs<br>
+    |---+----Images<br>
+    |---Default.aspx<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; |---Default.aspx.cs<br>
+    |---Skyline_NBA.aspx<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; |---Skyline_NBA.aspx.cs<br>
+    |---UserDefine_1.aspx<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; |---UserDefine_1.aspx.cs<br>
+    |---UserDefine_2.aspx<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; |---UserDefine_2.aspx.cs<br>
+    |---web.config<br>
+    |---ErrLog.txt<br>
+    <br>
+    <span style=FONT-WEIGHT:bold></span>
+    <h2>
+      3. Compute Skyline objects<a name="Compute Skyline objects"></a>
+    </h2>
+    In this part, the ideas used to compute the skyline objects in our website
+    will be discussed. All the codes about these algorithms can be found in the
+    <span style=FONT-STYLE:italic>App_code</span> folder. In implementation of
+    our algorithms, all the objects in data set have been considered as a row of
+    data in a data table, which is correspond to the data table in database.<br>
+    <br>
+    <h3>
+      3.1 BNL(Block-nested-loops)
+    </h3>
+    BNL algorithm is a straight-forward computation process for skyline query.
+    This algorithm keep a window to store candidate skyline objects and then fix
+    the real skyline objects by comparing objects in the window with all the
+    objects not in the window. Finally all the objects which cannot be dominated
+    by any other objects will be left in the window as the skyline objects.<br>
+    In [BKS01], the window for the BNL algorithm is fixed, however in our
+    implementation, it is dynamic ranged, which can improve the efficiency but
+    heavier memory load.<br>
+    In <span style=FONT-STYLE:italic>BasicSkyline.cs</span>, we firstly defined
+    the operator <span style=FONT-STYLE:italic>blnDominate</span>, which will
+    return whether one row in a data table can dominate another row. This
+    operator will be called in the
+    <span style=FONT-STYLE:italic>BasicBNLSkyline</span> function, and then this
+    function will compare all the objects for the skyline object which will not
+    be dominated by any other objects.<br>
+    <br>
+    <h3>
+      3.2 SFS(Sort Filter Skyline)
+    </h3>
+    SFS requires presorted data on all dimensions of the data table for each
+    column(attribution) according to the descend or ascend sequence. It is based
+    on the theory that the skyline represents the closure over the maximum
+    scoring tuples of the relation with respect to all monotone scoring
+    functions[CGGL03].<br>
+    <br>
+    With no duplicate in the data table, all the data can be ranked according to
+    each of the columns(attributions), and then the one with higher rank
+    compared to the others will surely be the skyline object. Based on this
+    idea, a sweep algorithm can be implemented on the presorted data to scan
+    row-by-row to record the objects with higher ranks in each columns as the
+    skyline objects. <span style=FONT-STYLE:italic>PreSort</span> is the
+    function to presort the date for each columns(attributions), and then
+    <span style=FONT-STYLE:italic>SkylineQuery_Presorted</span> is used for the
+    skyline query by sweeping.<br>
+    <br>
+    The actual data always have duplication, however, and the simple sweep can
+    no longer get the correct answer due to the reason that the non-skyline
+    object which has the same values on some columns(attributions) as one of the
+    skyline objects will be counted as a skyline object. Now our attempt is use
+    basic BNL algorithm for the objects gained from the sweep algorithm.<br>
+    <br>
+    <h3>
+      3.3 Epsilon Skyline
+    </h3>
+    Epsilon skyline is a new attemption on the fixed number of skyline query, or
+    k-skyline, which will find exactly k objects in the data table with better
+    attributions than any others. Common skyline query always can't control the
+    number of the objects queried out, and this method is an improvement for the
+    user defined skyline computation.<br>
+    <h2>
+      4. User defined data schema<a name="User defined data schema"></a>
+    </h2>
+    Users defined data schema provides easier and more customized skyline
+    queries. Using this feature, users can upload their own data schemes and
+    also the whole data table into the database, and then run skyline query on
+    them. All the features are included in the
+    <span style=FONT-STYLE:italic>UserDefined_1.aspx.cs</span> and
+    <span style=FONT-STYLE:italic>UserDefined_2.aspx.cs</span>.<br>
+    <br>
+    <h3>
+      4.1 Database setup
+    </h3>
+    These features are supported by special data table in database: Schemas,
+    which includes three attributions: SchemaID, SchemaName, Columns.<br>
+    <br>
+    +Schemas<br>
+    |-----SchemaID&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; ID of the schemes<br>
+    |-----SchemaName&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Name of the
+    schemes<br>
+    |-----Columns&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    &nbsp;&nbsp; &nbsp;&nbsp; Columns contained in the scheme, divided with ,
+    between columns<br>
+    <h3>
+      4.2 User defined data schema upload
+    </h3>
+    This feature uses the DataSet adapter provided by ADO.NET 2.0, which will
+    setup a data connection between the data and the project, and then provide
+    necessary interface to the developer for select, delete, insert.<br>
+    <br>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span style=COLOR:#ff0000>&lt;asp:ObjectDataSource
+    ID=</span><span style=COLOR:#3333ff>"ObjectDataSource1"
+    </span><span style=COLOR:#ff0000>runat=</span><span style=COLOR:#3333ff>"server"</span>
+    <span style=COLOR:#ff0000>DeleteMethod=</span><span style=COLOR:#3333ff>"Delete"</span></span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span style=COLOR:#ff0000>InsertMethod=</span><span style=COLOR:#3333ff>"Insert"
+    </span><span style=COLOR:#ff0000>OldValuesParameterFormatString=</span><span style=COLOR:#3333ff>"original_{0}"</span>
+    <span style=COLOR:#ff0000>SelectMethod=</span><span style=COLOR:#3333ff>"GetSchemaData"</span></span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span style=COLOR:#ff0000>TypeName=</span><span style=COLOR:#3333ff>"dsSchemaTableAdapters.SchemasTableAdapter"</span>
+    <span style=COLOR:#ff0000>UpdateMethod=</span><span style=COLOR:#3333ff>"Update"</span><span style=COLOR:#ff0000>&gt;</span></span><br style=FONT-STYLE:italic>
+    <span style="FONT-STYLE:italic; COLOR:#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &lt;DeleteParameters&gt;</span><br style="FONT-STYLE:italic; COLOR:#ff0000">
+    <span style="FONT-STYLE:italic; COLOR:#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    ...</span><br style="FONT-STYLE:italic; COLOR:#ff0000">
+    <span style="FONT-STYLE:italic; COLOR:#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &lt;/DeleteParameters&gt;</span><br style="FONT-STYLE:italic; COLOR:#ff0000">
+    <span style="FONT-STYLE:italic; COLOR:#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &lt;UpdateParameters&gt;</span><br style="FONT-STYLE:italic; COLOR:#ff0000">
+    <span style="FONT-STYLE:italic; COLOR:#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    ...</span><br style="FONT-STYLE:italic; COLOR:#ff0000">
+    <span style="FONT-STYLE:italic; COLOR:#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &lt;/UpdateParameters&gt;</span><br style="FONT-STYLE:italic; COLOR:#ff0000">
+    <span style="FONT-STYLE:italic; COLOR:#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &lt;InsertParameters&gt;</span><br style="FONT-STYLE:italic; COLOR:#ff0000">
+    <span style="FONT-STYLE:italic; COLOR:#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    ...</span><br style="FONT-STYLE:italic; COLOR:#ff0000">
+    <span style="FONT-STYLE:italic; COLOR:#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &lt;/InsertParameters&gt;</span><br style="FONT-STYLE:italic; COLOR:#ff0000">
+    <span style="FONT-STYLE:italic; COLOR:#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &lt;/asp:ObjectDataSource&gt;</span><br>
+    <br>
+    Then we use two controls: GridView and DetailView, both of which are new
+    controls in .NET2.0, to provide the on-the-fly data schemes upload:<br>
+    <br>
+    <span style=FONT-STYLE:italic><span style=COLOR:#ff0000>&lt;asp:GridView
+    ID=</span><span style=COLOR:#3333ff>"GridView1"</span>
+    <span style=COLOR:#ff0000>runat</span>=<span style=COLOR:#3333ff>"server"</span>
+    <span style=COLOR:#ff0000>DataSourceID=</span><span style=COLOR:#3333ff>"ObjectDataSource1"</span>
+    <span style=COLOR:#ff0000>OnSelectedIndexChanged=</span>"<span style=COLOR:#3333ff>GridView1_SelectedIndexChanged"</span></span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span style=COLOR:#ff0000>Width=</span><span style=COLOR:#3333ff>"650px"
+    </span><span style=COLOR:#ff0000>AutoGenerateColumns=</span><span style=COLOR:#3333ff>"False"</span>
+    <span style=COLOR:#ff0000>DataKeyNames=</span><span style=COLOR:#3333ff>"SchemaID"</span>&gt;</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>...</span><br style=FONT-STYLE:italic>
+    <br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic><span style=COLOR:#ff0000>&lt;asp:DetailsView
+    ID=</span><span style=COLOR:#3333ff>"DetailsView1"</span>
+    <span style=COLOR:#ff0000>runat=</span><span style=COLOR:#3333ff>"server"
+    </span><span style=COLOR:#ff0000>AutoGenerateRows=</span><span style=COLOR:#3333ff>"False"</span></span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span style=COLOR:#ff0000>DataSourceID=<span style=COLOR:#3333ff>"</span></span><span style=COLOR:#3333ff>ObjectDataSource1"
+    </span><span style=COLOR:#ff0000>Height=</span><span style=COLOR:#3333ff>"50px"
+    </span><span style=COLOR:#ff0000>Width=</span><span style=COLOR:#3333ff>"649px"</span>
+    <span style=COLOR:#ff0000>DataKeyNames=</span><span style=COLOR:#3333ff>"SchemaID"
+    </span><span style=COLOR:#ff0000>DefaultMode=</span><span style=COLOR:#3333ff>"Insert"</span><span style=COLOR:#ff0000>&gt;</span></span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>...</span><br>
+    <br>
+    We also provide the feature to upload schemes from text file. The format of
+    the text file is required to be like the following:<br>
+    <br>
+    <span style=FONT-STYLE:italic>Column1&nbsp;&nbsp; Column2&nbsp;&nbsp;
+    Column3</span><br>
+    <br>
+    In the text file, there will be a tab
+    <span style=FONT-STYLE:italic>("\t")</span> between two column names, and
+    the scheme will be terminated by an enter
+    <span style=FONT-STYLE:italic>("\n")</span>. The
+    <span style=FONT-STYLE:italic>btnUpload_Click</span> behavior then will read
+    all the text in the text file and just turn the first line as the active
+    scheme for storing, which means that this feature can only read one scheme
+    from one text file each time.<br>
+    <h3>
+      4.3 Bulk upload user defined data into database
+    </h3>
+    This feature will enable user to upload their data into database from a text
+    file which contains data in the follow format:<br>
+    <br>
+    R1C1&nbsp;&nbsp; R1C2&nbsp;&nbsp; R1C3&nbsp;&nbsp; ...&nbsp;&nbsp; R1Cn<br>
+    R2C1&nbsp;&nbsp; R2C2&nbsp;&nbsp; R2C3&nbsp;&nbsp; ...&nbsp;&nbsp; R2Cn<br>
+    ...<br>
+    RmC1&nbsp;&nbsp; RmC2&nbsp;&nbsp; RmC3&nbsp;&nbsp; ...&nbsp;&nbsp; RmCn<br>
+    <br>
+    There is a tab ("\t") between two columns and each data row is terminated by
+    an enter ("\n").<br>
+    <br>
+    The upload feature uses the
+    <span style=FONT-STYLE:italic>System.Data.SqlClient.SqlBulkCopy</span> in
+    <span style=FONT-STYLE:italic>blnBulk2DB</span>, which will bulk upload data
+    into an existing data table in database. It is new in the ADO.NET 2.0.<br>
+    <br>
+    To avoid possible failure of upload, we use transaction to protect the
+    integration of the data:<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span style=COLOR:#3333ff>SqlConnection</span> conn =
+    <span style=COLOR:#3333ff>new</span>
+    <span style=COLOR:#3333ff>SqlConnection</span>(<span style=COLOR:#3333ff>System.Configuration.ConfigurationManager.AppSettings</span>["DB_NBAConnectionString"]);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; conn.Open();<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style=COLOR:#009900>//Start
+    transaction</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span style=COLOR:#3333ff>SqlTransaction</span> trans =
+    conn.BeginTransaction();<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ... ...<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span style=COLOR:#33cc00>//Start to bulk add data into new table</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span style=COLOR:#3333ff>SqlBulkCopy</span> sqlBulkObj =
+    <span style=COLOR:#3333ff>new SqlBulkCopy</span>(conn,
+    <span style=COLOR:#3333ff>SqlBulkCopyOptions.KeepIdentity</span>, trans);<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; ... ...<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; trans.Commit();<br>
+    <br>
+    <h2>
+      5 System Error Logger<a name="System Error Logger"></a>
+    </h2>
+    For the purpose of research, there will be unavoidable error in the running
+    time of the website, and always these error messages are important for
+    developer and researcher to check their algorithms. For this purpose, we
+    make a error logger in the file
+    <span style=FONT-STYLE:italic>SystemLog.cs</span> to store most of the error
+    into the log file <span style=FONT-STYLE:italic>ErrLog.txt</span>.<br>
+    <br>
+    <span style=FONT-WEIGHT:bold></span>
+    <h3>
+      5.1 How Error Logger works
+    </h3>
+    The principle of the logger is very simple: we just maintain a log file in
+    the main directionary of the website. If there is no such a file, a new log
+    file will be created.<br>
+    <br>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=COLOR:#33cc00>
+    //Check whether the log file is
+    existing.</span></span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if
+    (!<span style=COLOR:#3366ff>File.Exists</span>(FilePath))</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span style=COLOR:#3333ff>FileStream</span> fs = new
+    <span style=COLOR:#3333ff>FileStream</span>(FilePath,
+    <span style=COLOR:#3333ff>FileMode.CreateNew</span>);</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    fs.Close();</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    }</span><br>
+    <br>
+    The length of the log file is limited in 24KB. If one error occurs, all the
+    error message will be appended into this file.<br>
+    <br>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span><span style="COLOR:#33cc00; FONT-STYLE:italic">//Write error
+    log.</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if
+    (</span><span style="COLOR:#3333ff; FONT-STYLE:italic">File.ReadAllBytes</span><span style=FONT-STYLE:italic>(FilePath).Length
+    &gt;= 240000)</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span><span style="COLOR:#3333ff; FONT-STYLE:italic">File.WriteAllText</span><span style=FONT-STYLE:italic>(FilePath,
+    DateTime.Now + "\t" + strException +
+    "\n");</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    }</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    else</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span><span style="COLOR:#3333ff; FONT-STYLE:italic">File.AppendAllText</span><span style=FONT-STYLE:italic>(FilePath,
+    DateTime.Now + "\t" + strException +
+    "\n");</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    }</span><br>
+    <br>
+    <h3>
+      5.2 How to use this logger in your developing?
+    </h3>
+    To redirect any error in your implementation to the log file, you can simply
+    do it like this:<br>
+    <br>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span><span style="COLOR:#3333ff; FONT-STYLE:italic">try</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span><span style="COLOR:#009900; FONT-STYLE:italic">// Your code
+    here</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    }</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span><span style="COLOR:#3333ff; FONT-STYLE:italic">catch
+    </span><span style=FONT-STYLE:italic>(</span><span style="COLOR:#3333ff; FONT-STYLE:italic">Exception</span><span style=FONT-STYLE:italic>
+    ex)</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span><span style="COLOR:#3333ff; FONT-STYLE:italic">SystemLog.WriteException</span><span style=FONT-STYLE:italic>(ex.ToString());</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span><span style="COLOR:#009900; FONT-STYLE:italic">// The terminate
+    process</span><br style=FONT-STYLE:italic>
+    <span style=FONT-STYLE:italic>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    }</span><br>
+    <br>
+    <span style=FONT-WEIGHT:bold></span>
+    <h3>
+      5.3 The content of the ErrLog.txt
+    </h3>
+    The content of the ErrLog.txt is the same as the standard format of any
+    error threw out by .NET CLR debugger:<br>
+    <br>
+    <span style="FONT-STYLE:italic; COLOR:#ff0000">2006-11-17
+    18:05:21&nbsp;&nbsp;&nbsp; System.ArgumentException: Column 'c2' does not
+    belong to table .</span><br style="FONT-STYLE:italic; COLOR:#ff0000">
+    <span style="FONT-STYLE:italic; COLOR:#ff0000">&nbsp;&nbsp; at
+    System.Data.DataRow.GetDataColumn(String
+    columnName)</span><br style="FONT-STYLE:italic; COLOR:#ff0000">
+    <span style="FONT-STYLE:italic; COLOR:#ff0000">&nbsp;&nbsp; at
+    System.Data.DataRow.get_Item(String
+    columnName)</span><br style="FONT-STYLE:italic; COLOR:#ff0000">
+    <span style="FONT-STYLE:italic; COLOR:#ff0000">&nbsp;&nbsp; at
+    BasicSkyline.blnDominate(DataRow dr1, DataRow dr2, ArrayList columnList,
+    ArrayList TypeList) in e:\Documents and Settings\LeeWinnie\My
+    Documents\Visual Studio
+    2005\WebSites\SkylineWebSite\App_Code\BasicSkyline.cs:line
+    173</span><br style="FONT-STYLE:italic; COLOR:#ff0000">
+    <span style="FONT-STYLE:italic; COLOR:#ff0000">&nbsp;&nbsp; at
+    BasicSkyline.BasicBNLSkyline(DataTable dt, ArrayList columnList, ArrayList
+    TypeList) in e:\Documents and Settings\LeeWinnie\My Documents\Visual Studio
+    2005\WebSites\SkylineWebSite\App_Code\BasicSkyline.cs:line 91</span><br>
+    <br>
+    <h2>
+      6 Reference<a name=Reference></a>
+    </h2>
+    All the following reference paper can be found here:
+    <a href=http://groups-beta.google.com/group/DB_Skyline target=blank_ title="DB Skyline Group in Google Group">http://groups-beta.google.com/group/DB_Skyline</a>
+    , which is a discussion group on Skyline computation maintained by the
+    author of this document.<br>
+    <br>
+    <ul>
+      <li>
+        [BKS01]: Stephan B¨orzs¨onyi, Donald Kossmann and Konrad Stocker.
+        <span style=FONT-STYLE:italic>The Skyline Operator</span>, In ICDE,
+        pp421-430, 2001.<br>
+      </li>
+      <li>
+        [CGGL03]: Jan Chomicki, Parke Godfrey, Jarek Gryz, and Dongming Liang.
+        <span style=FONT-STYLE:italic>Skyline with Presorting: Theory and
+        Optimizations</span><br>
+      </li>
+      <li>
+        [BCL90]: J. L. Bentley, K. L. Clarkson, and D. B. Levine. Fast linear
+        expected-time algorithms for computing maxima and convex hulls. In SODA,
+        pp. 179-187, Jan. 1990.<br>
+      </li>
+      <li>
+        [TEO01]: K. -L. Tan, P. K. Eng, and B. C. Ooi. Efficient progressive
+        skyline computation. In VLDB, pp 301-310, Sept. 2001<br>
+      </li>
+      <li>
+        [KRR02]: D. Kossmann, F. Ramask, and S. Rost. Shooting stars in the sky:
+        An online algorithm for skyline queries. In VLDB, pp275-286, Aug. 2002<br>
+      </li>
+    </ul>
+    <h2>
+      7 LICENSE: GPL and GFDL<a name=Licenses></a>
+    </h2>
+    This document is under the protection of GFDL, and the program of the
+    website is under GPL. Both of them can be found here:
+    <a href=http://www.gnu.org/licenses/ target=blank_ title="GNU Licenses">http://www.gnu.org/licenses/</a>
+    <h1>
+      Index<a name=Index></a>
+    </h1>
+    <br>
+    <br>
+    <br>
+    <hr style="WIDTH:100%; HEIGHT:2px">Skyline Website<br>
+    Last Modified:<br><address style="align: right;"><small>Generated on Sun Nov 26 20:22:25 2006 for Skyline Website by&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1-p1 </small></address>
+
+    <span style=FONT-WEIGHT:bold></span>
+  </div>
+</div></body>
+</html>

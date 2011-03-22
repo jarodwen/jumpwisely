@@ -1,0 +1,12 @@
+2006-11-17 18:05:21	System.ArgumentException: Column 'c2' does not belong to table .
+   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at BasicSkyline.blnDominate(DataRow dr1, DataRow dr2, ArrayList columnList, ArrayList TypeList) in e:\Documents and Settings\LeeWinnie\My Documents\Visual Studio 2005\WebSites\SkylineWebSite\App_Code\BasicSkyline.cs:line 173
+   at BasicSkyline.BasicBNLSkyline(DataTable dt, ArrayList columnList, ArrayList TypeList) in e:\Documents and Settings\LeeWinnie\My Documents\Visual Studio 2005\WebSites\SkylineWebSite\App_Code\BasicSkyline.cs:line 91
+2006-12-1 16:27:55	System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Double.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToDouble(String value)
+   at BasicSkyline.blnDominate(DataRow dr1, DataRow dr2, ArrayList columnList, ArrayList TypeList) in e:\Documents and Settings\LeeWinnie\My Documents\Visual Studio 2005\WebSites\SkylineWebSite\App_Code\BasicSkyline.cs:line 221
+   at BasicSkyline.BasicBNLSkyline(DataTable dt, ArrayList columnList, ArrayList TypeList) in e:\Documents and Settings\LeeWinnie\My Documents\Visual Studio 2005\WebSites\SkylineWebSite\App_Code\BasicSkyline.cs:line 93

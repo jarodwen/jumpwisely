@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.1-p1">
+  <compounddef id="class___default" kind="class" prot="public">
+    <compoundname>_Default</compoundname>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class___default_1dacf7c92cb8d02f22ce02f0ceed897c1" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void _Default.Page_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Page_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/Default.aspx.cs" line="19" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/Default.aspx.cs" bodystart="18" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Default page of Skyline Website. </para>    </briefdescription>
+    <detaileddescription>
+<para>&lt;author&gt;Jarod Wen&lt;/author&gt; &lt;Date&gt;20:18pm, Nov 26th, 2006&lt;/Date&gt; </para>    </detaileddescription>
+    <location file="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/Default.aspx.cs" line="17" bodyfile="E:/Documents and Settings/LeeWinnie/My Documents/Visual Studio 2005/WebSites/SkylineWebSite/Default.aspx.cs" bodystart="16" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class___default_1dacf7c92cb8d02f22ce02f0ceed897c1" prot="protected" virt="non-virtual"><scope>_Default</scope><name>Page_Load</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

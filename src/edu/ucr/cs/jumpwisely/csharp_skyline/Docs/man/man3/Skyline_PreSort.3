@@ -1,0 +1,103 @@
+.TH "Skyline_PreSort" 3 "26 Nov 2006" "Version 1.0" "Skyline Website" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Skyline_PreSort \- <Date>20:18pm, Nov 26th, 2006</Date>  
+
+.PP
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSkyline_PreSort\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBSkyline_PreSort\fP \fBInstance\fP ()"
+.br
+.ti -1c
+.RI "static ArrayList \fBSkylineQuery_Presorted\fP (DataTable dt, ArrayList columnList, ArrayList TypeList)"
+.br
+.RI "\fISkylines the query_ presorted. \fP"
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static DataTable \fBPreSort\fP (DataTable dtSource, ArrayList columnList, ArrayList TypeList)"
+.br
+.RI "\fIPresort all the values in each column of the data table, according to the sorting type specified in TyoeList. \fP"
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBSkyline_PreSort\fP \fBm_instance\fP = null"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+<Date>20:18pm, Nov 26th, 2006</Date> 
+
+<author>Jarod Wen</author> 
+.PP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Skyline_PreSort.Skyline_PreSort ()"
+.PP
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBSkyline_PreSort\fP Skyline_PreSort.Instance ()\fC [static]\fP"
+.PP
+.SS "static DataTable Skyline_PreSort.PreSort (DataTable dtSource, ArrayList columnList, ArrayList TypeList)\fC [static, private]\fP"
+.PP
+Presort all the values in each column of the data table, according to the sorting type specified in TyoeList. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdtSource\fP Source data table
+.br
+\fIcolumnList\fP All the columns in the skyline query
+.br
+\fITypeList\fP Sorting type: for each item, 0-AESC, 1-DESC
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The table contains sorted index of the source data objects
+.RE
+.PP
+
+.SS "static ArrayList Skyline_PreSort.SkylineQuery_Presorted (DataTable dt, ArrayList columnList, ArrayList TypeList)\fC [static]\fP"
+.PP
+Skylines the query_ presorted. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdt\fP The dt.
+.br
+\fIcolumnList\fP The column list.
+.br
+\fITypeList\fP The type list.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBSkyline_PreSort\fP \fBSkyline_PreSort.m_instance\fP = null\fC [static, private]\fP"
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Skyline Website from the source code.
